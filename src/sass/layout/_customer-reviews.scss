@@ -1,6 +1,6 @@
 .customer-reviews {
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 393px;
   background-image: url(../images/bg/bg-mobile/bg-mobile-1x.jpg);
   background-size: cover;
   text-align: center;
@@ -58,7 +58,7 @@
   height: 100%;
   //   width: inherit;
   z-index: 0;
-//   opacity: 0;
+  //   opacity: 0;
   transition: all 2250ms ease-in-out;
   position: relative;
 }
@@ -66,11 +66,11 @@
 .slide1 {
   transform: scale(0.7);
 
-    opacity: 0;
+  opacity: 0;
   transition: all 500ms ease-in-out;
 }
 .slide2 {
-    opacity: 0;
+  opacity: 0;
   transform: scale(0.7);
   //   transform: translateX(100%);
   transition: all 500ms ease-in-out;
@@ -79,7 +79,7 @@
   left: 0;
 }
 .slide3 {
-    opacity: 0;
+  opacity: 0;
   transform: scale(0.7);
 
   transition: all 500ms ease-in-out;
@@ -103,7 +103,6 @@
   }
 }
 .wrapper label {
-
   display: block;
   width: 12px;
   height: 12px;
