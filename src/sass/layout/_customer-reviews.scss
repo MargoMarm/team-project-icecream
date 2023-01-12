@@ -1,0 +1,129 @@
+.customer-reviews {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url(../images/bg/bg-mobile/bg-mobile-1x.jpg);
+  background-size: cover;
+  text-align: center;
+}
+.customer-photo {
+  display: block;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.customer-comment {
+  display: flex;
+  align-items: center;
+  min-width: 280px;
+  height: 256px;
+  background-color: $color-bg-main;
+  padding: 35px 39px;
+  margin-bottom: 32px;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2.55;
+  /* or 31px */
+
+  text-align: center;
+}
+.customer-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.86;
+
+  $color-text-secondary: #131313;
+  color: $color-text-secondary;
+}
+.wrapper .container {
+  max-width: 320px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper > input {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.slides {
+  height: 100%;
+  //   width: inherit;
+  z-index: 0;
+//   opacity: 0;
+  transition: all 2250ms ease-in-out;
+  position: relative;
+}
+
+.slide1 {
+  transform: scale(0.7);
+
+    opacity: 0;
+  transition: all 500ms ease-in-out;
+}
+.slide2 {
+    opacity: 0;
+  transform: scale(0.7);
+  //   transform: translateX(100%);
+  transition: all 500ms ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slide3 {
+    opacity: 0;
+  transform: scale(0.7);
+
+  transition: all 500ms ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3 {
+  opacity: 1;
+  transform: scale(1);
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 15px;
+  &:hover {
+    cursor: url(../images/cursor/cursor.svg) 4 12, auto;
+  }
+}
+.wrapper label {
+
+  display: block;
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  transition: background-color ease-in-out 0.5s;
+  &:not(:first-child) {
+    margin-left: 18px;
+  }
+}
+
+.wrapper label {
+  background-color: #d9d9d9;
+}
+
+.wrapper label:hover,
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3) {
+  background-color: $color-bg-main;
+  cursor: url(../images/cursor/cursor.svg) 4 12, auto;
+}
