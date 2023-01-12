@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
     <title>Page title</title>
     <link
       rel="ice-cream-icon"
@@ -13,13 +14,26 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="images/logo/logo-2x.png"
+      href="./images/logo/logo-2x.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
       href="./images/logo/logo-3x.png"
+    />
+    <!-- slick css -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
     <!-- base fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,5 +61,21 @@
     </main>
     <include src="./partials/footer.html"></include>
     <include src="./partials/overlay.html"></include>
+    <!-- slick jqery -->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <!-- slick js -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- base js -->
+    <script src="./js/slick.js" type="module"></script>
   </body>
 </html>
