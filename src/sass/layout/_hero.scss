@@ -1,0 +1,57 @@
+.hero__section {
+    padding-top: 50px;
+    background-image: url(/src/images/hero/dots-mobile.png);
+}
+
+.hero__title--container {
+    max-width: 247px;
+    margin-left: 20px;
+    margin-bottom: 32px;
+}
+
+.hero__title {
+    font-family: 'Seymour One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.27;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FCFCFC;
+    
+}
+
+.hero__list {
+    margin-left: 20px;
+}
+
+.hero__item {
+    display: inline-block;
+    &:not(:last-child) {
+        margin-right: 12px;
+        }
+}
+
+.hero__link--btn {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+    @extend %centered;
+    color: #000000;
+    border: 2px solid #F8D24E;
+    border-radius: 8px;
+    padding: 11px 26px;
+}
+
+.hero__link--link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+    @extend %centered;
+    text-decoration-line: underline;
+    color: #F8D24E;
+}
