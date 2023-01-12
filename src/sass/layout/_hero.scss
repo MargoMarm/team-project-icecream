@@ -1,6 +1,11 @@
 .hero__section {
+    position: relative;
     padding-top: 50px;
-    background-image: url(/src/images/hero/dots-mobile.png);
+    background-image: url(/src/images/hero/dots-mobile.png),
+    url(/src/images/hero/big-ice-cream-mobile-1x.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 502px;
 }
 
 .hero__title--container {
@@ -54,4 +59,10 @@
     @extend %centered;
     text-decoration-line: underline;
     color: #F8D24E;
+}
+
+.hero__image {
+    position: absolute;
+    bottom: 0;
+    right: 60px;
 }
