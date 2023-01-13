@@ -25,7 +25,7 @@
               ./images/header/logo-mobile-2x.png 2x,
               ./images/header/logo-mobile-3x.png 3x
             "
-            media="(min-width:480px)"
+            media="(max-width:767px)"
           />
 
           <img src="./images/logo/logo-1x.png" alt="logo" width="100%" />
@@ -79,7 +79,7 @@
           <a href="#Home" class="mobile-menu__link">Home</a>
         </li>
 
-        <li class="mobile-menu">
+        <li class="mobile-menu__item">
           <a href="#How it’s made?" class="mobile-menu__link">How it’s made?</a>
         </li>
 
@@ -91,6 +91,12 @@
           <a href="#Contact" class="mobile-menu__link">Contact</a>
         </li>
       </ul>
+      <button type="button" class="button-modal">
+        Buy now
+        <svg width="12" height="12" class="button-modal__icon">
+          <use href="./images/sprite.svg#icon-arrow-right-on-btn"></use>
+        </svg>
+      </button>
     </div>
   </div>
 
@@ -102,19 +108,3 @@
   ></script>
   <script defer src="./index.js"></script>
 </header>
-
-<!-- btn -->
-
-<!-- <button type="button" class="button-modal__in-menu">
-          Buy now
-          <svg width="12" height="12" class="buy-btn-icon">
-            <use href="./images/sprite.svg#icon-arrow-right-on-btn"></use>
-          </svg>
-        </button> -->
-
-<!-- <button type="button" class="button-modal">
-      Buy now
-      <svg width="12" height="12" class="buy-btn-icon">
-        <use href="./images/sprite.svg#icon-arrow-right-on-btn"></use>
-      </svg>
-    </button> -->
