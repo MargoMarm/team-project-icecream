@@ -1,29 +1,23 @@
 <header class="page-header">
-  <div class="header-container">
+  <div class="page-header__container">
     <nav class="navigation">
       <a href="#"> <img src="./images/logo/logo-1x.png" alt="logo" /></a>
 
-      <button
-        type="button"
-        class="mobile-menu-button"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        data-menu-button
-      >
+      <button type="button" class="menu-button" data-menu-button>
         <svg width="32" height="32" aria-label="перемикач мобільного меню">
           <use
-            class="icon-menu__open"
+            class="icon-menu-open"
             href="./images/sprite.svg#icon-menu-open"
           ></use>
 
           <use
-            class="icon-menu__close"
+            class="icon-menu-close"
             href="./images/sprite.svg#icon-menu-close"
           ></use>
         </svg>
       </button>
 
-      <div class="menu">
+      <div class="menu" id="menu">
         <ul class="navigation-list">
           <li class="navigation-list__item">
             <a href="#Home" class="navigation-list__link">Home</a>
@@ -62,6 +56,5 @@
       </svg>
     </button>
   </div>
+  <script src="index.js"></script>
 </header>
-
-<script src="./index.js"></script>

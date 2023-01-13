@@ -1,7 +1,7 @@
 .page-header {
   position: relative;
 }
-.header-container {
+.page-header__container {
   padding-top: 12px;
   padding-left: 20px;
   padding-right: 20px;
@@ -35,37 +35,39 @@
   }
 }
 
-.mobile-menu-button {
+.menu-button {
   position: absolute;
   top: 17px;
   right: 20px;
 
+  display: inline-block;
+
   padding: 0;
-  margin-left: auto;
+  margin: 0;
 
   width: 32px;
   height: 32px;
   border: none;
   background-color: transparent;
-  fill: white;
+  fill: $color-btn-text;
   z-index: 3;
 
-  & .icon-menu__close {
+  & .icon-menu-close {
     display: none;
   }
 
-  &.is-open .icon-menu__close {
+  &.is-open .icon-menu-close {
     display: block;
   }
 
-  &.is-open .icon-menu__open {
+  &.is-open .icon-menu-open {
     display: none;
   }
 
-  &:hover,
-  &:focus {
-    fill: $color-accent;
-  }
+  // &:hover,
+  // &:focus {
+  //   fill: $color-accent;
+  // }
 
   @media screen and (min-width: 768px) {
     position: static;
@@ -168,7 +170,7 @@
 
   &:hover,
   &:focus {
-    color: black;
+    color: $color-btn-text;
   }
 }
 
@@ -192,14 +194,14 @@
 
   transition: $cubic;
 
-  color: #000000;
+  color: $color-btn-text;
 
   &:hover {
     color: currentColor;
   }
 
   &:focus {
-    color: white;
+    color: $color-btn-text;
   }
 
   @media screen and (min-width: 768px) {
@@ -229,7 +231,7 @@
 
     transition: $cubic;
 
-    color: #000000;
+    color: $color-btn-text;
   }
 
   &:hover {
@@ -237,7 +239,7 @@
   }
 
   &:focus {
-    color: white;
+    color: $color-btn-text;
   }
 }
 
@@ -245,13 +247,13 @@
   margin-left: 4px;
   transition: $cubic;
 
-  fill: #000000;
+  fill: $color-btn-text;
 
   &:hover {
-    fill: #000000;
+    fill: $color-btn-text;
   }
 
   &:focus {
-    fill: white;
+    fill: $color-btn-text;
   }
 }
