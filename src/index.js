@@ -1,5 +1,6 @@
 const sliderMain = new ('.slider_main',
 {
+  freeMode: true,
   direction: 'vertical',
   loop: true,
 
