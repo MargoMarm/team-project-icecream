@@ -1,24 +1,67 @@
-<header>
-  <div class="header-container container">
+<header class="page-header">
+  <div class="header-container">
     <nav class="navigation">
       <a href="#"> <img src="./images/logo/logo-1x.png" alt="logo" /></a>
 
-      <ul class="navigation-list">
-        <li class="navigation-list__item">
-          <a href="#Home" class="navigation__link">Home</a>
-        </li>
-        <li class="navigation-list__item">
-          <a href="#How it’s made?" class="navigation__link">How it’s made?</a>
-        </li>
-        <li class="navigation-list__item">
-          <a href="#Our products" class="navigation__link">Our products</a>
-        </li>
-        <li class="navigation-list__item">
-          <a href="#Contact" class="navigation__link">Contact</a>
-        </li>
-      </ul>
+      <button
+        type="button"
+        class="mobile-menu-button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-menu-button
+      >
+        <svg width="32" height="32" aria-label="перемикач мобільного меню">
+          <use
+            class="icon-menu__open"
+            href="./images/sprite.svg#icon-menu-open"
+          ></use>
+
+          <use
+            class="icon-menu__close"
+            href="./images/sprite.svg#icon-menu-close"
+          ></use>
+        </svg>
+      </button>
+
+      <div class="menu">
+        <ul class="navigation-list">
+          <li class="navigation-list__item">
+            <a href="#Home" class="navigation-list__link">Home</a>
+          </li>
+
+          <li class="navigation-list__item">
+            <a href="#How it’s made?" class="navigation-list__link"
+              >How it’s made?</a
+            >
+          </li>
+
+          <li class="navigation-list__item">
+            <a href="#Our products" class="navigation-list__link"
+              >Our products</a
+            >
+          </li>
+
+          <li class="navigation-list__item">
+            <a href="#Contact" class="navigation-list__link">Contact</a>
+          </li>
+        </ul>
+
+        <button type="button" class="button-modal__in-menu">
+          Buy now
+          <svg width="12" height="12" class="buy-btn-icon">
+            <use href="./images/sprite.svg#icon-arrow-right-on-btn"></use>
+          </svg>
+        </button>
+      </div>
     </nav>
 
-    <button type="button" class="button-modal">Buy now</button>
+    <button type="button" class="button-modal">
+      Buy now
+      <svg width="12" height="12" class="buy-btn-icon">
+        <use href="./images/sprite.svg#icon-arrow-right-on-btn"></use>
+      </svg>
+    </button>
   </div>
 </header>
+
+<script src="./index.js"></script>
