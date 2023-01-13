@@ -1,6 +1,6 @@
-.advantages {
+.container--advantages {
   margin: 0 auto;
-  padding-bottom: 64px;
+  padding: 60px 0 64px 0;
   width: 320px;
   @media screen and (min-width: 768px) {
     width: 768px;
@@ -34,16 +34,16 @@
   }
 }
 .advantages__image {
-  margin: 0 auto;
   @media screen and (min-width: 768px) {
     padding-bottom: 28px;
   }
 }
 .advantages__number {
+  text-transform: uppercase;
+  line-height: 1.22;
   font-size: 36px;
   font-weight: 700;
-  letter-spacing: 0.04;
-  text-align: center;
+  letter-spacing: 0.04em;
   @media screen and (min-width: 768px) {
     font-size: 48px;
   }
@@ -52,16 +52,16 @@
   }
 }
 .advantages__description {
+  text-align: center;
+  line-height: 1.75;
   font-size: 12px;
   font-weight: 700;
-  text-align: center;
   @media screen and (min-width: 768px) {
     font-size: 14px;
     font-weight: 400;
   }
   @media screen and (min-width: 1200px) {
     font-size: 16px;
-    letter-spacing: 0.02;
-    padding: 0 1px;
+    letter-spacing: 0.02em;
   }
 }
