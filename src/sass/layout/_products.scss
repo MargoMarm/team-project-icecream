@@ -73,6 +73,10 @@
   color: $color-text-secondary;
   margin-bottom: 12px;
 
+  @include tablet {
+    font-size: 22px;
+  }
+
   @include desktop {
     font-size: 30px;
   }
@@ -80,7 +84,6 @@
 
 .products__title {
   font-family: 'Seymour One', sans-serif;
-  font-weight: 400;
   font-size: 30px;
   line-height: 1.27;
   text-align: center;
@@ -103,10 +106,11 @@
   // margin: -168px;
   @include tablet {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
-.products__cicle {
+.products__circle {
   background: linear-gradient(
       0deg,
       rgba(156, 190, 143, 0.7),
@@ -136,7 +140,7 @@
   }
 }
 
-.products__cicle::before {
+.products__circle::before {
   content: '';
   background-size: cover;
   width: 200px;
@@ -206,7 +210,7 @@
   }
 
   @include tel {
-    // width: 250px;
+    width: 250px;
     height: 428px;
     padding-top: 126px;
     padding-left: 25px;
@@ -215,7 +219,6 @@
 
   @include tablet {
     width: 224px;
-    height: 428px;
     padding-top: 108px;
     margin-left: 0;
     padding-left: 26px;
@@ -234,7 +237,7 @@
 
 .products-item:nth-child(2) {
   background-color: $color-second-card;
-  & .products__cicle {
+  & .products__circle {
     background: linear-gradient(
         0deg,
         rgba(248, 210, 78, 0.7),
@@ -275,7 +278,7 @@
 
 .products-item:nth-child(3) {
   background-color: $color-third-card;
-  & .products__cicle {
+  & .products__circle {
     background: linear-gradient(
         0deg,
         rgba(213, 117, 63, 0.7),
@@ -330,6 +333,7 @@
 
   @include desktop {
     font-size: 30px;
+    margin-bottom: 66px;
   }
 }
 
@@ -351,16 +355,14 @@
   @extend %cursor;
   padding: 0;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.products-item__arrow {
-  display: block;
+  // margin-left: auto;
+  // margin-right: auto;
   position: absolute;
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
+  height: 16px;
 
   @include tablet {
     bottom: 12px;
