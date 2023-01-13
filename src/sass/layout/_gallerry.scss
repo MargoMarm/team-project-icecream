@@ -84,7 +84,7 @@
     right: 0;
     bottom: 0;
     z-index: 2;
-    background: rgba($color: #000000, $alpha: 0.3);
+    background: rgba($color: #000000, $alpha: 0.7);
     margin-bottom: 8px;
     opacity: 0;
     transition: all 0.3s;
@@ -127,6 +127,7 @@
       }
     }
     .cardDescription {
+      color: $color-second-card;
       font-size: 7px;
       letter-spacing: 0.1rem;
       text-transform: uppercase;
@@ -168,7 +169,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  min-width: 320px;
+  min-width: 1023px;
   min-height: 600px;
 
   z-index: 999;
