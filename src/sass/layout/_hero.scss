@@ -41,7 +41,7 @@
     line-height: 1.27;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #FCFCFC;
+    color: $color-text-main;
     margin-bottom: 32px;
         @media (min-width: 768px) {
         margin-bottom: 24px;
@@ -74,38 +74,38 @@
 }
 
 .hero__link--btn {
-    color: #000000;
-    border: 2px solid #F8D24E;
+    color: $color-btn-text;
+    border: 2px solid $color-accent;
     border-radius: 8px;
     padding: 11px 26px;
         &:hover {
-        border-color: #0A8817;
+        border-color: $color-btn-hover;
         }
         @media (min-width: 1200px) {
-        color: #131313;
+        color: $color-text-secondary;
         border-radius: 10px;
         padding: 12px 34px;
         &:focus {
-        color: #FCFCFC;
+        color: $color-text-main;
         }
         &:disabled {
-        color: #000000;
-        border-color: #ABABAB;
+        color: $color-btn-text;
+        border-color: $color-btn-disabled;
         }
         }
 }
 
 .hero__link--link {
     text-decoration-line: underline;
-    color: #F8D24E;
+    color: $color-accent;
         &:hover {
-        color: #0A8817;
+        color: $color-btn-hover;
         }
         &:focus {
-        color: #FCFCFC;
+        color: $color-text-main;
         }
         &:disabled {
-        color: #ABABAB;
+        color: $color-btn-disabled;
         }
         @media (min-width: 1200px) {
         padding: 12px 22px;
@@ -138,7 +138,7 @@
     line-height: 1.21;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #131313;
+    color: $color-text-secondary;
     margin-bottom: 4px;
         @media (min-width: 1200px) {
         font-size: 46px;
@@ -149,7 +149,7 @@
     font-weight: 400;
     font-size: 8px;
     line-height: 1.25;
-    color: #FCFCFC;
+    color: $color-text-main;
         @media (min-width: 1200px) {
         font-size: 14px;
         line-height: 1.21;
@@ -178,7 +178,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 1.4;    
-    color: #FCFCFC;
+    color: $color-text-main;
     margin-bottom: 12px;
         @media (min-width: 1200px) {
         font-size: 14px;
@@ -195,7 +195,7 @@
 }
 
 .hero__wrapper--arrow {
-    fill: #FCFCFC;
+    fill: $color-text-main;
 }
 
 img {
