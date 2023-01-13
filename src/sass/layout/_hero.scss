@@ -8,29 +8,32 @@
     // height: 502px;
 }
 
-img {
-    display: block;
-}
-
 .hero__container {
     position: relative;
     width: 100%;
     margin: 0 auto;
     padding: 50px 20px 236px;
     
-        @media (min-width: 480px) {
+        @media screen and (min-width:480px) {
             width: 480px;
             padding: 40px 20px 150px;
         }
     
-        @media (min-width: 768px) {
+        @media screen and (min-width:768px) {
             width: 768px;
+            padding: 14px 32px 0px;
         }
     
-        @media (min-width: 1200px) {
+        @media screen and (min-width:1200px) {
             width: 1200px;
         }
 } 
+
+.hero__container--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .hero__title--container {
     max-width: 247px;
@@ -46,6 +49,9 @@ img {
     text-transform: uppercase;
     color: #FCFCFC;
     margin-bottom: 32px;
+        @media screen and (min-width:1200px) {
+        margin-bottom: 24px;
+        }
 }
 
 .hero__item {
@@ -88,17 +94,98 @@ img {
         }
 }
 
+.hero__about {
+    @media screen and (max-width:767px) {
+    display: none;
+    }
+}
+
+.hero__about--item {
+    font-family: 'Montserrat';
+    font-style: normal;
+    text-align: right;
+        &:not(:last-child) {
+        margin-bottom: 20px;
+        }
+}
+
+.hero__about--number {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 1.21;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #131313;
+    margin-bottom: 4px;
+}
+
+.hero__about--text {
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    color: #FCFCFC;
+}
+
+.hero__wrapper {
+    max-width: 139px;
+    margin-left: 215px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+        @media screen and (max-width:767px) {
+        display: none;
+        }
+}
+
+.hero__wrapper--text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;    
+    color: #FCFCFC;
+    margin-bottom: 12px;
+}
+
+.hero__wrapper--btn {
+    display: block;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.hero__wrapper--arrow {
+    fill: #FCFCFC;
+}
+
+img {
+    display: block;
+}
+
 .hero__image--cone {
     position: absolute;
     bottom: 0;
     right: 60px;
-        @media (min-width: 480px) {
-        right: 0;
+    z-index: 1;
+        @media screen and (min-width:480px) {
+        right: 20px;
+        }
+        @media screen and (min-width:768px) {
+        right: 92px;
         }
 }
 
 .hero__image--dots {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 0;       
 }
+
+.hero__image--plate {
+    position: absolute;
+    bottom: 12px;
+    left: 32px;
+    @media screen and (max-width:767px) {
+    display: none;
+    }
+}
+
