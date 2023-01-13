@@ -29,22 +29,22 @@ a {
   text-decoration: none;
 }
 
-// .container {
-//   margin: 0 auto;
-//   padding: 0 20px;
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
 
 //   @media (min-width: 480px) {
 //     width: 480px;
 //     padding: 0 20px;
 //   }
 
-//   @media (min-width: 768px) {
-//     width: 768px;
-//     padding: 0 32px;
-//   }
+  @media (min-width: 768px) {
+    width: 768px;
+    padding: 0 32px;
+  }
 
-//   @media (min-width: 1200px) {
-//     width: 1200px;
-//     padding: 0 16px;
-//   }
-// }
+  @media (min-width: 1200px) {
+    width: 1200px;
+    padding: 0 16px;
+  }
+}
