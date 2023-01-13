@@ -1,50 +1,73 @@
 <section class="customer-reviews">
-  <div class="wrapper container">
+  <div class="wrapper container container--wrapper">
     <input type="radio" name="point" id="slide1" checked />
     <input type="radio" name="point" id="slide2" />
     <input type="radio" name="point" id="slide3" />
 
-    <div class="slider">
-      <div class="slides slide1">
+    <div class="wrapper__slider">
+      <div class="wrapper__slides wrapper__slides--slide1">
         <img
-          class="customer-photo"
+          class="wrapper__photo"
+          srcset="
+            ./images/customer-reviews/member1-1x.png 1x,
+            ./images/customer-reviews/member1-2x.png 2x,
+            ./images/customer-reviews/member1-3x.png 3x
+          "
           src="./images/customer-reviews/member1-1x.png"
-          alt=""
+          alt="customer-photo"
+          height="auto"
         />
-        <p class="customer-comment">
+        <!-- <img class="team__photo" srcset="
+                  ./images/team/mobile-team-igor@1x.jpg 1x,
+                  ./images/team/mobile-team-igor@2x.jpg 2x
+                " src="./images/team/mobile-team-igor@1x.jpg" alt="Ігор Дем'яненко" height="auto"> -->
+
+        <p class="wrapper__comment">
           I love visiting your cafe. You prepare the most delicious ice cream in
           Los Angeles! In addition, you have beautiful serving, cozy atmosphere
           and polite staff.
         </p>
-        <p class="customer-name">Emily, Los Angeles</p>
+        <p class="wrapper__name">Emily, Los Angeles</p>
       </div>
-      <div class="slides slide2">
+      <div class="wrapper__slides wrapper__slides--slide2">
         <img
-          class="customer-photo"
+          class="wrapper__photo"
+          srcset="
+            ./images/customer-reviews/member2-1x.png 1x,
+            ./images/customer-reviews/member2-2x.png 2x,
+            ./images/customer-reviews/member2-3x.png 3x
+          "
           src="./images/customer-reviews/member2-1x.png"
-          alt=""
+          alt="customer-photo"
+          height="auto"
         />
-        <p class="customer-comment">
+        <p class="wrapper__comment">
           Every day we come to you with friends after classes in college. We
           love your ice cream and casual atmosphere!
         </p>
-        <p class="customer-name">Bryan, New-York</p>
+        <p class="wrapper__name">Bryan, New-York</p>
       </div>
-      <div class="slides slide3">
+      <div class="wrapper__slides wrapper__slides--slide3">
         <img
-          class="customer-photo"
+          class="wrapper__photo"
+          srcset="
+            ./images/customer-reviews/member3-1x.png 1x,
+            ./images/customer-reviews/member3-2x.png 2x,
+            ./images/customer-reviews/member3-3x.png 3x
+          "
           src="./images/customer-reviews/member3-1x.png"
-          alt=""
+          alt="customer-photo"
+          height="auto"
         />
-        <p class="customer-comment">
+        <p class="wrapper__comment">
           Ice cream is my passion! I love your chocolate hazelnut ice cream! And
           I really like the excellent service - always served politely and
           quickly!
         </p>
-        <p class="customer-name">Diana, Chicago</p>
+        <p class="wrapper__name">Diana, Chicago</p>
       </div>
     </div>
-    <div class="controls">
+    <div class="wrapper__controls">
       <label for="slide1"></label>
       <label for="slide2"></label>
       <label for="slide3"></label>
