@@ -5,13 +5,17 @@
   background-size: cover;
   text-align: center;
 }
-.customer-photo {
+.container--wrapper {
+  max-width: 320px;
+}
+
+.wrapper__photo {
   display: block;
   margin-bottom: 32px;
   margin-left: auto;
   margin-right: auto;
 }
-.customer-comment {
+.wrapper__comment {
   display: flex;
   align-items: center;
   min-width: 280px;
@@ -28,16 +32,13 @@
 
   text-align: center;
 }
-.customer-name {
+.wrapper__name {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.86;
 
   $color-text-secondary: #131313;
   color: $color-text-secondary;
-}
-.wrapper .container {
-  max-width: 320px;
 }
 
 .wrapper {
@@ -49,12 +50,12 @@
   display: none;
 }
 
-.slider {
+.wrapper__slider {
   position: relative;
   overflow: hidden;
   margin-bottom: 12px;
 }
-.slides {
+.wrapper__slides {
   height: 100%;
   //   width: inherit;
   z-index: 0;
@@ -63,13 +64,13 @@
   position: relative;
 }
 
-.slide1 {
+.wrapper__slides--slide1 {
   transform: scale(0.7);
 
   opacity: 0;
   transition: all 500ms ease-in-out;
 }
-.slide2 {
+.wrapper__slides--slide2 {
   opacity: 0;
   transform: scale(0.7);
   //   transform: translateX(100%);
@@ -78,7 +79,7 @@
   top: 0;
   left: 0;
 }
-.slide3 {
+.wrapper__slides--slide3 {
   opacity: 0;
   transform: scale(0.7);
 
@@ -87,13 +88,13 @@
   top: 0;
   left: 0;
 }
-#slide1:checked ~ .slider > .slide1,
-#slide2:checked ~ .slider > .slide2,
-#slide3:checked ~ .slider > .slide3 {
+#slide1:checked ~ .wrapper__slider > .wrapper__slides--slide1,
+#slide2:checked ~ .wrapper__slider > .wrapper__slides--slide2,
+#slide3:checked ~ .wrapper__slider > .wrapper__slides--slide3 {
   opacity: 1;
   transform: scale(1);
 }
-.controls {
+.wrapper__controls {
   display: flex;
   justify-content: center;
   padding-left: 10px;
@@ -108,6 +109,7 @@
   height: 12px;
 
   border-radius: 50%;
+  background-color: #d9d9d9;
 
   transition: background-color ease-in-out 0.5s;
   &:not(:first-child) {
@@ -115,9 +117,9 @@
   }
 }
 
-.wrapper label {
-  background-color: #d9d9d9;
-}
+// .wrapper label {
+//   background-color: #d9d9d9;
+// }
 
 .wrapper label:hover,
 #slide1:checked ~ .controls label:nth-of-type(1),
