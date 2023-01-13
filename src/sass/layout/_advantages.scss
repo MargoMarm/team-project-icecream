@@ -1,13 +1,5 @@
-.container--advantages {
-  margin: 0 auto;
-  padding: 60px 0 64px 0;
-  width: 320px;
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-  }
+.advantages {
+  padding: 0 0 64px 0;
 }
 .advantages__items {
   display: flex;
