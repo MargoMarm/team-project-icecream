@@ -3,13 +3,41 @@
     <nav class="navigation">
       <a href="#"> <img src="./images/logo/logo-1x.png" alt="logo" /></a>
 
-      <button type="button" class="menu-button" data-menu-button>
+      <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
         <svg width="32" height="32" aria-label="перемикач мобільного меню">
           <use
             class="icon-menu-open"
             href="./images/sprite.svg#icon-menu-open"
           ></use>
+        </svg>
+      </button>
 
+      <ul class="menu">
+        <li class="menu-list__item">
+          <a href="#Home" class="menu-list__link">Home</a>
+        </li>
+
+        <li class="menu-list__item">
+          <a href="#How it’s made?" class="menu-list__link">How it’s made?</a>
+        </li>
+
+        <li class="menu-list__item">
+          <a href="#Our products" class="menu-list__link">Our products</a>
+        </li>
+
+        <li class="menu-list__item">
+          <a href="#Contact" class="menu-list__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-toggle js-close-menu">
+        <svg width="32" height="32" aria-label="перемикач мобільного меню">
           <use
             class="icon-menu-close"
             href="./images/sprite.svg#icon-menu-close"
@@ -17,44 +45,47 @@
         </svg>
       </button>
 
-      <div class="menu" id="menu">
-        <ul class="navigation-list">
-          <li class="navigation-list__item">
-            <a href="#Home" class="navigation-list__link">Home</a>
-          </li>
+      <ul class="mobile-menu">
+        <li class="mobile-mune__item">
+          <a href="#Home" class="mobile-mune__link">Home</a>
+        </li>
 
-          <li class="navigation-list__item">
-            <a href="#How it’s made?" class="navigation-list__link"
-              >How it’s made?</a
-            >
-          </li>
+        <li class="mobile-menu">
+          <a href="#How it’s made?" class="mobile-mune__link">How it’s made?</a>
+        </li>
 
-          <li class="navigation-list__item">
-            <a href="#Our products" class="navigation-list__link"
-              >Our products</a
-            >
-          </li>
+        <li class="mobile-mune__item">
+          <a href="#Our products" class="mobile-mune__link">Our products</a>
+        </li>
 
-          <li class="navigation-list__item">
-            <a href="#Contact" class="navigation-list__link">Contact</a>
-          </li>
-        </ul>
+        <li class="mobile-mune__item">
+          <a href="#Contact" class="mobile-mune__link">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-        <button type="button" class="button-modal__in-menu">
+  <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="./index.js"></script>
+</header>
+
+<!-- btn -->
+
+<!-- <button type="button" class="button-modal__in-menu">
           Buy now
           <svg width="12" height="12" class="buy-btn-icon">
             <use href="./images/sprite.svg#icon-arrow-right-on-btn"></use>
           </svg>
-        </button>
-      </div>
-    </nav>
+        </button> -->
 
-    <button type="button" class="button-modal">
+<!-- <button type="button" class="button-modal">
       Buy now
       <svg width="12" height="12" class="buy-btn-icon">
         <use href="./images/sprite.svg#icon-arrow-right-on-btn"></use>
       </svg>
-    </button>
-  </div>
-  <script src="index.js"></script>
-</header>
+    </button> -->
