@@ -1,8 +1,14 @@
 <section class="customer-reviews">
-  <div class="wrapper container container--wrapper">
-    <input type="radio" name="point" id="slide1" checked />
-    <input type="radio" name="point" id="slide2" />
-    <input type="radio" name="point" id="slide3" />
+  <div class="wrapper container">
+    <input
+      class="wrapper__input"
+      type="radio"
+      name="point"
+      id="slide1"
+      checked
+    />
+    <input class="wrapper__input" type="radio" name="point" id="slide2" />
+    <input class="wrapper__input" type="radio" name="point" id="slide3" />
 
     <div class="wrapper__slider">
       <div class="wrapper__slides wrapper__slides--slide1">
@@ -17,10 +23,6 @@
           alt="customer-photo"
           height="auto"
         />
-        <!-- <img class="team__photo" srcset="
-                  ./images/team/mobile-team-igor@1x.jpg 1x,
-                  ./images/team/mobile-team-igor@2x.jpg 2x
-                " src="./images/team/mobile-team-igor@1x.jpg" alt="Ігор Дем'яненко" height="auto"> -->
 
         <p class="wrapper__comment">
           I love visiting your cafe. You prepare the most delicious ice cream in
@@ -68,9 +70,9 @@
       </div>
     </div>
     <div class="wrapper__controls">
-      <label for="slide1"></label>
-      <label for="slide2"></label>
-      <label for="slide3"></label>
+      <label class="wrapper__label" for="slide1"></label>
+      <label class="wrapper__label" for="slide2"></label>
+      <label class="wrapper__label" for="slide3"></label>
     </div>
   </div>
 </section>
