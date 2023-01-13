@@ -1,10 +1,39 @@
 <header class="page-header">
   <div class="page-header__container">
     <nav class="navigation">
-      <a href="#"> <img src="./images/logo/logo-1x.png" alt="logo" /></a>
+      <a href="#">
+        <picture>
+          <source
+            srcset="
+              ./images/header/logo-desktop-1x.png 1x,
+              ./images/header/logo-desktop-2x.png 2x,
+              ./images/header/logo-desktop-3x.png 3x
+            "
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="
+              ./images/header/logo-tablet-1x.png 1x,
+              ./images/header/logo-tablet-2x.png 2x,
+              ./images/header/logo-tablet-3x.png 3x
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./images/header/logo-mobile-1x.png 1x,
+              ./images/header/logo-mobile-2x.png 2x,
+              ./images/header/logo-mobile-3x.png 3x
+            "
+            media="(min-width:480px)"
+          />
+
+          <img src="./images/logo/logo-1x.png" alt="logo" width="100%" />
+        </picture>
+      </a>
 
       <button
-        class="menu-toggle js-open-menu"
+        class="menu-button-open js-open-menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
       >
@@ -17,26 +46,26 @@
       </button>
 
       <ul class="menu">
-        <li class="menu-list__item">
-          <a href="#Home" class="menu-list__link">Home</a>
+        <li class="menu__item">
+          <a href="#Home" class="menu__link">Home</a>
         </li>
 
-        <li class="menu-list__item">
-          <a href="#How it’s made?" class="menu-list__link">How it’s made?</a>
+        <li class="menu__item">
+          <a href="#How it’s made?" class="menu__link">How it’s made?</a>
         </li>
 
-        <li class="menu-list__item">
-          <a href="#Our products" class="menu-list__link">Our products</a>
+        <li class="menu__item">
+          <a href="#Our products" class="menu__link">Our products</a>
         </li>
 
-        <li class="menu-list__item">
-          <a href="#Contact" class="menu-list__link">Contact</a>
+        <li class="menu__item">
+          <a href="#Contact" class="menu__link">Contact</a>
         </li>
       </ul>
     </nav>
 
     <div class="menu-container js-menu-container" id="mobile-menu">
-      <button type="button" class="menu-toggle js-close-menu">
+      <button type="button" class="menu-button-close js-close-menu">
         <svg width="32" height="32" aria-label="перемикач мобільного меню">
           <use
             class="icon-menu-close"
@@ -46,20 +75,20 @@
       </button>
 
       <ul class="mobile-menu">
-        <li class="mobile-mune__item">
-          <a href="#Home" class="mobile-mune__link">Home</a>
+        <li class="mobile-menu__item">
+          <a href="#Home" class="mobile-menu__link">Home</a>
         </li>
 
         <li class="mobile-menu">
-          <a href="#How it’s made?" class="mobile-mune__link">How it’s made?</a>
+          <a href="#How it’s made?" class="mobile-menu__link">How it’s made?</a>
         </li>
 
-        <li class="mobile-mune__item">
-          <a href="#Our products" class="mobile-mune__link">Our products</a>
+        <li class="mobile-menu__item">
+          <a href="#Our products" class="mobile-menu__link">Our products</a>
         </li>
 
-        <li class="mobile-mune__item">
-          <a href="#Contact" class="mobile-mune__link">Contact</a>
+        <li class="mobile-menu__item">
+          <a href="#Contact" class="mobile-menu__link">Contact</a>
         </li>
       </ul>
     </div>
