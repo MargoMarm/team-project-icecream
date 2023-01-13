@@ -1,31 +1,22 @@
-.hero {
-    // position: relative;
-    // padding-top: 50px;
-    // // background-image: url(/src/images/hero/dots-mobile.png),
-    // // url(/src/images/hero/big-ice-cream-mobile-1x.png);
-    // // background-position: bottom;
-    // // background-repeat: no-repeat;
-    // height: 502px;
-}
-
 .hero__container {
     position: relative;
     width: 100%;
     margin: 0 auto;
     padding: 50px 20px 236px;
     
-        @media screen and (min-width:480px) {
+        @media (min-width:480px) {
             width: 480px;
             padding: 40px 20px 150px;
         }
     
-        @media screen and (min-width:768px) {
+        @media (min-width:768px) {
             width: 768px;
             padding: 14px 32px 0px;
         }
     
-        @media screen and (min-width:1200px) {
+        @media (min-width:1200px) {
             width: 1200px;
+            padding: 45px 16px 0px;
         }
 } 
 
@@ -37,6 +28,9 @@
 
 .hero__title--container {
     max-width: 247px;
+        @media (min-width:1200px) {
+        max-width: 367px;
+        }
 }
 
 .hero__title {
@@ -49,8 +43,12 @@
     text-transform: uppercase;
     color: #FCFCFC;
     margin-bottom: 32px;
-        @media screen and (min-width:1200px) {
+        @media (min-width: 768px) {
         margin-bottom: 24px;
+        }
+        @media (min-width: 1200px) {
+        font-size: 38px;
+        margin-bottom: 28px;
         }
 }
 
@@ -68,6 +66,11 @@
     font-size: 12px;
     line-height: 1.25;
     @extend %centered;
+    @extend %cursor;
+        @media (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.29;
+        }
 }
 
 .hero__link--btn {
@@ -77,7 +80,19 @@
     padding: 11px 26px;
         &:hover {
         border-color: #0A8817;
-    }
+        }
+        @media (min-width: 1200px) {
+        color: #131313;
+        border-radius: 10px;
+        padding: 12px 34px;
+        &:focus {
+        color: #FCFCFC;
+        }
+        &:disabled {
+        color: #000000;
+        border-color: #ABABAB;
+        }
+        }
 }
 
 .hero__link--link {
@@ -92,10 +107,13 @@
         &:disabled {
         color: #ABABAB;
         }
+        @media (min-width: 1200px) {
+        padding: 12px 22px;
+        }
 }
 
 .hero__about {
-    @media screen and (max-width:767px) {
+    @media (max-width:767px) {
     display: none;
     }
 }
@@ -107,6 +125,11 @@
         &:not(:last-child) {
         margin-bottom: 20px;
         }
+        @media (min-width: 1200px) {
+        &:not(:last-child) {
+        margin-bottom: 16px;
+        }
+        }
 }
 
 .hero__about--number {
@@ -117,6 +140,9 @@
     text-transform: uppercase;
     color: #131313;
     margin-bottom: 4px;
+        @media (min-width: 1200px) {
+        font-size: 46px;
+        }
 }
 
 .hero__about--text {
@@ -124,6 +150,10 @@
     font-size: 8px;
     line-height: 1.25;
     color: #FCFCFC;
+        @media (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.21;
+        }
 }
 
 .hero__wrapper {
@@ -131,8 +161,14 @@
     margin-left: 215px;
     margin-top: 40px;
     padding-bottom: 20px;
-        @media screen and (max-width:767px) {
+        @media (max-width: 767px) {
         display: none;
+        }
+        @media (min-width: 1200px) {
+        max-width: 200px;
+        margin-left: 257px;
+        margin-top: 111px;
+        padding-bottom: 103px;
         }
 }
 
@@ -144,6 +180,10 @@
     line-height: 1.4;    
     color: #FCFCFC;
     margin-bottom: 12px;
+        @media (min-width: 1200px) {
+        font-size: 14px;
+        margin-bottom: 24px;        
+        }
 }
 
 .hero__wrapper--btn {
@@ -151,6 +191,7 @@
     border: none;
     background-color: transparent;
     padding: 0;
+    @extend %cursor;
 }
 
 .hero__wrapper--arrow {
@@ -166,10 +207,10 @@ img {
     bottom: 0;
     right: 60px;
     z-index: 1;
-        @media screen and (min-width:480px) {
+        @media (min-width:480px) {
         right: 20px;
         }
-        @media screen and (min-width:768px) {
+        @media (min-width:768px) {
         right: 92px;
         }
 }
@@ -184,8 +225,14 @@ img {
     position: absolute;
     bottom: 12px;
     left: 32px;
-    @media screen and (max-width:767px) {
-    display: none;
-    }
+    z-index: 1;
+        @media (max-width:767px) {
+        display: none;
+        }
+        @media (min-width:1200px) {
+        bottom: 65px;
+        left: 16px;
+        }
+
 }
 
