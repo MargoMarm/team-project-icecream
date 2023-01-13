@@ -6,13 +6,16 @@
   flex-direction: column;
   align-items: center;
   gap: 22px;
-  padding: 0 22.5px;
+  max-width: 230px;
+  margin: 0 auto;
   @media screen and (min-width: 768px) {
+    max-width: 616px;
     flex-direction: row;
     justify-content: center;
     gap: 80px;
   }
   @media screen and (min-width: 1200px) {
+    max-width: 1168px;
     gap: 32px;
   }
 }
@@ -23,6 +26,9 @@
   gap: 16px;
   @media screen and (min-width: 768px) {
     gap: 12px;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 36px;
   }
 }
 .advantages__image {
