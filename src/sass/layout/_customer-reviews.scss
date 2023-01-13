@@ -42,7 +42,6 @@
   align-items: center;
 
   max-width: 280px;
-  // height: 256px;
 
   background-color: $color-bg-main;
   padding: 35px 39px;
@@ -53,9 +52,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 2.55;
-  /* or 31px */
 
-  // text-align: center;
   @media (min-width: 768px) {
     max-width: 705px;
     font-weight: 500;
@@ -97,9 +94,7 @@
 }
 .wrapper__slides {
   height: 100%;
-  //   width: inherit;
   z-index: 0;
-  //   opacity: 0;
   transition: all 2250ms ease-in-out;
   position: relative;
 }
@@ -113,7 +108,6 @@
 .wrapper__slides--slide2 {
   opacity: 0;
   transform: scale(0.7);
-  //   transform: translateX(100%);
   transition: all 500ms ease-in-out;
   position: absolute;
   top: 0;
