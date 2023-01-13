@@ -1,17 +1,39 @@
-.hero__section {
-    position: relative;
-    padding-top: 50px;
-    background-image: url(/src/images/hero/dots-mobile.png),
-    url(/src/images/hero/big-ice-cream-mobile-1x.png);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    height: 502px;
+.hero {
+    // position: relative;
+    // padding-top: 50px;
+    // // background-image: url(/src/images/hero/dots-mobile.png),
+    // // url(/src/images/hero/big-ice-cream-mobile-1x.png);
+    // // background-position: bottom;
+    // // background-repeat: no-repeat;
+    // height: 502px;
 }
+
+img {
+    display: block;
+}
+
+.hero__container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 20px 236px;
+    
+        @media (min-width: 480px) {
+            width: 480px;
+            padding: 40px 20px 150px;
+        }
+    
+        @media (min-width: 768px) {
+            width: 768px;
+        }
+    
+        @media (min-width: 1200px) {
+            width: 1200px;
+        }
+} 
 
 .hero__title--container {
     max-width: 247px;
-    margin-left: 20px;
-    margin-bottom: 32px;
 }
 
 .hero__title {
@@ -23,11 +45,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #FCFCFC;
-    
-}
-
-.hero__list {
-    margin-left: 20px;
+    margin-bottom: 32px;
 }
 
 .hero__item {
@@ -37,32 +55,50 @@
         }
 }
 
-.hero__link--btn {
+.hero__link {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 1.25;
     @extend %centered;
+}
+
+.hero__link--btn {
     color: #000000;
     border: 2px solid #F8D24E;
     border-radius: 8px;
     padding: 11px 26px;
+        &:hover {
+        border-color: #0A8817;
+    }
 }
 
 .hero__link--link {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.25;
-    @extend %centered;
     text-decoration-line: underline;
     color: #F8D24E;
+        &:hover {
+        color: #0A8817;
+        }
+        &:focus {
+        color: #FCFCFC;
+        }
+        &:disabled {
+        color: #ABABAB;
+        }
 }
 
-.hero__image {
+.hero__image--cone {
     position: absolute;
     bottom: 0;
     right: 60px;
+        @media (min-width: 480px) {
+        right: 0;
+        }
+}
+
+.hero__image--dots {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
