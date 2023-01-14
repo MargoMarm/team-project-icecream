@@ -90,8 +90,7 @@
   display: flex;
   align-items: center;
 
-  max-width: 280px;
-  min-height: 256px;
+  // min-height: 256px;
   padding: 35px 39px;
   margin-bottom: 32px;
 
@@ -103,6 +102,10 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 2.55;
+
+  @include tel {
+    max-width: 280px;
+  }
 
   @include tablet {
     max-width: 705px;
@@ -193,11 +196,8 @@
   color: inherit;
   background-color: transparent;
   padding: 0 9px;
-  //  &:not(:first-child) {
-  //   margin-left: 18px;
-  // }
-    @extend %cursor;
 
+  @extend %cursor;
 }
 
 .wrapper__label {
@@ -209,8 +209,6 @@
   background-color: #d9d9d9;
 
   transition: background-color ease-in-out 0.5s;
-
- 
 }
 .wrapper__button:hover .wrapper__label,
 .wrapper__label:focus-within .wrapper__label,
