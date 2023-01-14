@@ -55,7 +55,6 @@ background-color: var(--color-bg-main);
     line-height: 1.22;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    width: 210px;
     text-align: center;
     padding-top: 60px;
     padding-bottom: 12px;
@@ -99,10 +98,11 @@ background-color: var(--color-bg-main);
     @media screen and (min-width: 768px) {
         display: flex;
         float: left;
-        margin-left: 32px;
+        
         margin-top: 98px;
         width: 330px;
         height: 330px;
+        margin-bottom: 60px;
         box-shadow: 0px -26px 0px 1px rgba(248, 210, 78, 0.7);
     }
 
@@ -142,7 +142,7 @@ background-color: var(--color-bg-main);
         display: inline-block;
         padding-top: 80px;
         padding-bottom: 8px;
-        width: 334px;
+        min-width: 334px;
         text-align: left;
         padding-left: 38px;
 
@@ -150,7 +150,7 @@ background-color: var(--color-bg-main);
 
     @media screen and (min-width: 1200px) {
         font-size: 16px;
-        width: 463px;
+        min-width: 463px;
         text-align: left;
         padding-left: 109px;
         padding-top: 172px;
@@ -245,6 +245,7 @@ background-color: var(--color-bg-main);
     column-gap: 7.75px;
     border: none;
     margin: 0 auto;
+    margin-bottom: 50px;
     cursor: pointer;
 
     &:hover {
@@ -259,7 +260,9 @@ background-color: var(--color-bg-main);
         color: #000000;
         background-color: #ABABAB;
     }
-
+        @media screen and (min-width: 480px) {
+            margin-bottom: 60px;
+        }
     @media screen and (min-width: 768px) {
         display: inline-flex;
         flex-direction: column;
@@ -267,7 +270,7 @@ background-color: var(--color-bg-main);
     }
 
     @media screen and (min-width: 1200px) {
-
+        flex-direction: column;
         margin-left: 109px;
 
     }
