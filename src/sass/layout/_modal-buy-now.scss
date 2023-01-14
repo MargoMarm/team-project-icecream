@@ -277,15 +277,16 @@
   width: 100%;
   height: 100%;
 }
-.products-check__input:checked .modal-buy-now__item-green,
-.products-check__input:checked .modal-buy-now__item--yellow,
-.products-check__input:checked .modal-buy-now__item--brown {
-  background-color: #f8d24e;
+#ice-cream:checked ~ .modal-buy-now__list > .modal-buy-now__item,
+#ice-coffee:checked ~ .modal-buy-now__list > .modal-buy-now__item,
+#milk-shake:checked ~ .modal-buy-now__list > .modal-buy-now__item {
+  background-color: #96af8c;
 }
-.modal-buy-now__item:focus,
-.products-check__input:checked ~ .modal-buy-now__list > .modal-buy-now__item--green,
-.products-check__input:checked ~ .modal-buy-now__list > .modal-buy-now__item--yellow,
-.products-check__input:checked ~ .modal-buy-now__list > .modal-buy-now__item--brown {
+.modal-buy-now__item:hover .modal-buy-now__item,
+.modal-buy-now__item:focus-within .modal-buy-now__item,
+#ice-cream:checked ~ .modal-buy-now__list .modal-buy-now__item:nth-of-type(1),
+#ice-coffee:checked ~ .modal-buy-now__list .modal-buy-now__item:nth-of-type(2),
+#milk-shake:checked ~ .modal-buy-now__list .modal-buy-now__item:nth-of-type(3) {
   background-color: $color-bg-main;
   @extend %cursor;
 }
