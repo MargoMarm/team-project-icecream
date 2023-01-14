@@ -14,6 +14,17 @@
         }
 }
 
+.footer__wrap__title{
+    max-width: 234px;
+    @media (min-width: 768px) {
+            max-width: 354px;
+        }
+    
+        @media (min-width: 1200px) {
+            max-width: 524px;
+        }
+}
+
 .footer__title {
     font-weight: 700;
     font-size: 18px;
@@ -21,9 +32,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-    color: #FCFCFC;
-
-    max-width: 247px;
+    color: $color-text-main;
 
     padding-left: 6px;
     margin-bottom: 8px;
@@ -46,9 +55,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     
-    color: #FCFCFC;
-
-    max-width: 200px;
+    color: $color-text-main;
 
     margin-bottom: 60px;
     padding-left: 4;
@@ -60,13 +67,12 @@
         }
     @media (min-width: 1200px) {
         font-size: 58px;
-        margin-left: 0px;
         margin-bottom: 60px;
         max-width: none;
         }
 }
 
-.footer__wrap__soc{
+.footer__wrap-soc{
     @media (min-width: 768px) {
         margin: auto 0;
         }
@@ -87,8 +93,14 @@
         }
 }
 
-.footer__soc__list__link {
+.footer__link {
     @extend %cursor;
+}
+
+.footer__item{
+    &:hover{
+        fill: $color-text-main;
+    }
 }
 
 .footer__tel {
@@ -98,7 +110,7 @@
 
     text-align: right;
 
-    color: #131313;
+    color: $color-text-secondary;
     margin-bottom: 40px;
     @media (min-width: 768px) {
             margin-bottom: auto;
@@ -111,14 +123,14 @@
         }
 }
 
-.footer__tel__number {
+.footer__tel-number {
     font-weight: 700;
     font-size: 12px;
     line-height: 1.86;
     
     text-align: right;
     
-    color: #ffff;
+    color: $color-text-main;
 
     @extend %cursor;
     
@@ -142,7 +154,7 @@
     
     text-align: center;
     
-    color: #7A7A7A;
+    color: $color-text-footer;
     margin-top: 20px;
     @media (min-width: 1200px) {
             font-size: 16px;
@@ -156,7 +168,7 @@
 
     text-align: center;
 
-    color: #7A7A7A;
+    color: $color-text-footer;
     @media (min-width: 768px) {
         margin-top: 20px;
         margin-left: 5px;
