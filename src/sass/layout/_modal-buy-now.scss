@@ -2,11 +2,54 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   width: 280;
   background: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
 }
-.products__item--modal {
+.products-check__input {
+  display: none;
+}
+.modal-buy-now__item {
+  position: relative;
   height: auto;
+  border: 2px solid #96af8c;
+  border-radius: 15px;
+  
+}
+.modal-buy-now:first-child:before {
+  content: '';
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+
+  background-image: url(../images/products/card1-tablet-1x.png);
+
+ 
+}
+.modal-buy-now__title {
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $color-text-secondary;
+  margin-bottom: 20px;
+
+  @include tablet {
+    font-size: 22px;
+  }
+
+  @include desktop {
+    font-size: 30px;
+    margin-bottom: 66px;
+  }
+}
+.products-check__label {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 50px;
 }
