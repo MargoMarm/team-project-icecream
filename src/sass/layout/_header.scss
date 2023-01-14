@@ -1,7 +1,7 @@
-.page-header {
+.header {
   position: relative;
 }
-.page-header__container {
+.header__container {
   padding-top: 12px;
   padding-left: 20px;
   padding-right: 20px;
@@ -164,6 +164,7 @@
   padding-top: 12px;
   padding-left: 32px;
   padding-right: 20px;
+  padding-bottom: 64px;
 
   background-color: $color-bg-main;
 
@@ -177,6 +178,7 @@
   @media screen and (min-width: 480px) {
     padding-top: 20px;
     padding-left: 20px;
+    padding-bottom: 88px;
   }
 
   @media screen and (min-width: 768px) {
