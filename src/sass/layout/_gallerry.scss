@@ -1,12 +1,14 @@
 .gallery {
   transform: translateY(-32px);
-  @media screen and (min-width: 480px) {
+  margin-bottom: -410px;
+  @include tel {
     transform: translateY(-30px);
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     transform: translateY(-144px);
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
+    margin-bottom: -250px;
     transform: translateY(-98px);
   }
 }
@@ -20,16 +22,16 @@
     height: auto;
     border-radius: 24px;
   }
-  @media screen and (min-width: 480px) {
+  @include tel {
     img {
       width: 100%;
     }
     max-width: 440px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     max-width: 704px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     max-width: 1030px;
   }
   &:hover #slideset {
@@ -47,25 +49,25 @@
 }
 #slideset > * {
   position: absolute;
-  top: 100%;
-  left: 0;
+  left: 100%;
+  top: 0;
   animation: 12s autoplay infinite ease-in-out;
 }
 @keyframes autoplay {
   0% {
-    top: 100%;
+    left: 100%;
   }
   4% {
-    top: 0%;
+    left: 0%;
   }
   33.33% {
-    top: 0%;
+    left: 0%;
   }
   37.33% {
-    top: -100%;
+    left: -100%;
   }
   100% {
-    top: -100%;
+    left: -100%;
   }
 }
 #slideset > *:nth-child(1) {
@@ -93,19 +95,19 @@
   color: $color-btn-text;
   background: #aec6a5a9;
   display: none;
-  @media screen and (min-width: 480px) {
+  @include tel {
     display: inline-block;
     left: 12px;
     width: 94%;
     height: 15px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     left: 10px;
     bottom: 9.5px;
     width: 97%;
     height: 20px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     left: 7px;
     bottom: 9.5px;
     width: 98.7%;
@@ -117,38 +119,38 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    @media screen and (min-width: 480px) {
+    @include tel {
       gap: 30px;
     }
-    @media screen and (min-width: 768px) {
+    @include tablet {
       gap: 70px;
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       gap: 150px;
     }
   }
 
   .card__title {
     font-size: 10px;
-    @media screen and (min-width: 480px) {
+    @include tel {
       font-size: 12px;
     }
-    @media screen and (min-width: 768px) {
+    @include tablet {
       font-size: 15px;
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       font-size: 20px;
     }
   }
   .card__description {
     font-size: 7px;
-    @media screen and (min-width: 480px) {
+    @include tel {
       font-size: 10px;
     }
-    @media screen and (min-width: 768px) {
+    @include tablet {
       font-size: 12px;
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       font-size: 15px;
     }
   }
