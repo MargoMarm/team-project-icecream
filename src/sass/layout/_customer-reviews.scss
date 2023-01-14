@@ -78,6 +78,7 @@
   align-items: center;
 
   max-width: 280px;
+  min-height: 256px;
   padding: 35px 39px;
   margin-bottom: 32px;
 
@@ -92,12 +93,13 @@
 
   @include tablet {
     max-width: 705px;
+    min-height: 138px;
 
     font-weight: 500;
     font-size: 14px;
     line-height: 1.86;
-    padding: 29px 80px;
     letter-spacing: 0.04em;
+    padding: 29px 80px;
   }
   @include desktop {
     max-width: 968px;
@@ -117,8 +119,6 @@
   @include tablet {
     font-size: 16px;
     margin-bottom: 32px;
-  }
-  @include desktop {
   }
 }
 
