@@ -7,12 +7,13 @@
   padding-right: 20px;
 
   @media screen and (min-width: 480px) {
+    width: 480px;
     padding-top: 14px;
   }
 
   @media screen and (min-width: 768px) {
+    width: 768px;
     align-items: center;
-    width: 100%;
 
     padding-top: 20px;
     padding-left: 32px;
@@ -20,21 +21,28 @@
   }
 
   @media screen and (min-width: 1200px) {
+    width: 1200px;
     padding-top: 8px;
     padding-left: 16px;
     padding-right: 16px;
+
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-.menu-desktop .button-modal {
-  position: absolute;
-  top: 26px;
-  right: 87px;
+.menu-desktop {
+  display: flex;
+  align-items: center;
+}
 
+.menu-desktop .button-modal {
   display: block;
 
   width: 152px;
   height: 42px;
+
+  margin-left: 32px;
 
   font-weight: 600;
   font-size: 14px;
@@ -54,6 +62,10 @@
     display: none;
   }
 
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+  }
+
   &:hover {
     background-color: $color-btn-hover;
   }
@@ -68,6 +80,7 @@
 .navigation {
   display: flex;
   align-items: center;
+  flex-grow: 2;
 }
 
 // ЛОГО
@@ -140,7 +153,7 @@
 // МОБИЛЬНОЕ МЕНЮ!!!
 
 .menu-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -198,15 +211,15 @@
   background-color: transparent;
   fill: $color-btn-text-secondary;
 
-  // @media screen and (min-width: 480px) {
-  //   top: -82px;
-  //   right: 20px;
-  // }
+  @media screen and (min-width: 480px) {
+    top: -82px;
+    right: 20px;
+  }
 
-  // @media screen and (min-width: 768px) {
-  //   top: -72px;
-  //   right: 32px;
-  // }
+  @media screen and (min-width: 768px) {
+    top: -72px;
+    right: 32px;
+  }
 
   @media screen and (min-width: 1200px) {
     display: none;
