@@ -10,8 +10,14 @@
       background-image: url('../images/bg/bg-mobile/bg-mobile-2x.jpg');
     }
   }
+  @include tel {
+    padding-bottom: 409px;
+  }
 
   @include tablet {
+    padding-top: 283px;
+    padding-bottom: 379px;
+
     background-image: url('../images/bg/bg-tablet/bg-tablet-1x.jpg');
 
     @media (min-device-pixel-ratio: 2),
@@ -33,6 +39,8 @@
   }
 
   @include desktop {
+    padding-top: 464px;
+    padding-bottom: 228px;
     background-image: url('../images/bg/bg-desktop/bg-desktop-1x.jpg');
 
     @media (min-device-pixel-ratio: 2),
