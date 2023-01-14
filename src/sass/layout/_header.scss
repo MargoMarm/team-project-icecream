@@ -37,7 +37,9 @@
 }
 
 .menu-desktop .button-modal {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 152px;
   height: 42px;
@@ -132,7 +134,7 @@
   line-height: 1.21;
 
   padding-top: 32px;
-  padding-bottom: 13px;
+  padding-bottom: 26px;
 
   color: $color-text-main;
   transition: $cubic;
@@ -150,7 +152,7 @@
   }
 }
 
-// МОБИЛЬНОЕ МЕНЮ!!!
+// МОБИЛЬНОЕ МЕНЮ КОНТЕЙНЕР!!!
 
 .menu-container {
   position: fixed;
@@ -160,7 +162,7 @@
   height: 100vh;
 
   padding-top: 12px;
-  padding-left: 20px;
+  padding-left: 32px;
   padding-right: 20px;
 
   background-color: $color-bg-main;
@@ -173,7 +175,8 @@
   overflow: scroll;
 
   @media screen and (min-width: 480px) {
-    padding-top: 14px;
+    padding-top: 20px;
+    padding-left: 20px;
   }
 
   @media screen and (min-width: 768px) {
@@ -196,13 +199,25 @@
 .menu-container__item {
   display: flex;
   align-items: center;
+  margin-bottom: 51px;
+
+  @media screen and (min-width: 480px) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 76px;
+  }
 }
+
+// МОБИЛЬНОЕ МЕНЮ ЛОГО!!!
 
 .mobile-logo {
   @media screen and (min-width: 1200px) {
     display: none;
   }
 }
+
 .menu-container .menu-toggle {
   padding: 0;
 
@@ -217,21 +232,17 @@
   }
 }
 
+// МОБИЛЬНО МЕНЮ!!!
+
 .mobile-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding-top: 51px;
   margin-bottom: 110px;
 
   @media screen and (min-width: 480px) {
-    padding-top: 40px;
     margin-bottom: 114px;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding-top: 76px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -242,6 +253,12 @@
 .mobile-menu__item {
   &:not(:last-child) {
     margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -267,8 +284,12 @@
   }
 }
 
+// МОБИЛЬНОЕ МЕНЮ КНОПКА МОДАЛКИ!!!
+
 .menu-container .button-modal {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
 
