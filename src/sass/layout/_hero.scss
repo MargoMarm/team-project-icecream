@@ -35,8 +35,6 @@
 
 .hero__title {
     font-family: 'Seymour One';
-    font-style: normal;
-    font-weight: 400;
     font-size: 26px;
     line-height: 1.27;
     letter-spacing: 0.04em;
@@ -60,8 +58,6 @@
 }
 
 .hero__link {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 1.25;
@@ -88,10 +84,6 @@
         &:focus {
         color: $color-text-main;
         }
-        &:disabled {
-        color: $color-btn-text;
-        border-color: $color-btn-disabled;
-        }
         }
 }
 
@@ -103,10 +95,7 @@
         }
         &:focus {
         color: $color-text-main;
-        }
-        &:disabled {
-        color: $color-btn-disabled;
-        }
+        }        
         @media (min-width: 1200px) {
         padding: 12px 22px;
         }
@@ -119,8 +108,6 @@
 }
 
 .hero__about--item {
-    font-family: 'Montserrat';
-    font-style: normal;
     text-align: right;
         &:not(:last-child) {
         margin-bottom: 20px;
@@ -146,7 +133,6 @@
 }
 
 .hero__about--text {
-    font-weight: 400;
     font-size: 8px;
     line-height: 1.25;
     color: $color-text-main;
@@ -173,9 +159,6 @@
 }
 
 .hero__wrapper--text {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
     font-size: 12px;
     line-height: 1.4;    
     color: $color-text-main;
@@ -218,14 +201,13 @@ img {
 .hero__image--dots {
     position: absolute;
     bottom: 0;
-    right: 0;       
+    right: 0;
+    z-index: -1;
 }
 
 .hero__image--plate {
     position: absolute;
     bottom: 12px;
-    left: 32px;
-    z-index: 1;
         @media (max-width:767px) {
         display: none;
         }

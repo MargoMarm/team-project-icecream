@@ -1,0 +1,14 @@
+.isDisabled-border-c {
+    pointer-events: none;
+    border-color: $color-btn-disabled;
+}
+
+.isDisabled-text-c {
+    pointer-events: none;
+    color: $color-btn-disabled;
+}
+
+.isDisabled-bg-c {
+    pointer-events: none;
+    background-color: $color-btn-disabled;
+}
