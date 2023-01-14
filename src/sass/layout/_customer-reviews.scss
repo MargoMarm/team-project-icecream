@@ -186,6 +186,20 @@
   padding-left: 10px;
   padding-right: 15px;
 }
+.wrapper__button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  padding: 0 9px;
+  //  &:not(:first-child) {
+  //   margin-left: 18px;
+  // }
+    @extend %cursor;
+
+}
+
 .wrapper__label {
   display: block;
   width: 12px;
@@ -195,14 +209,14 @@
   background-color: #d9d9d9;
 
   transition: background-color ease-in-out 0.5s;
-  &:not(:first-child) {
-    margin-left: 18px;
-  }
-  &:hover,
-  #slide1:checked ~ .controls label:nth-of-type(1),
-  #slide2:checked ~ .controls label:nth-of-type(2),
-  #slide3:checked ~ .controls label:nth-of-type(3) {
-    background-color: $color-bg-main;
-    @extend %cursor;
-  }
+
+ 
+}
+.wrapper__button:hover .wrapper__label,
+.wrapper__label:focus-within .wrapper__label,
+#slide1:checked ~ .controls .wrapper__label:nth-of-type(1),
+#slide2:checked ~ .controls .wrapper__label:nth-of-type(2),
+#slide3:checked ~ .controls .wrapper__label:nth-of-type(3) {
+  background-color: $color-bg-main;
+  @extend %cursor;
 }
