@@ -3,40 +3,180 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 28px;
   width: 280;
   background: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
 }
+
+.modal-title {
+  font-family: 'Seymour One', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $color-text-secondary;
+
+  @include tel {
+    margin-bottom: 145px;
+  }
+
+  @include tablet {
+    line-height: 1.26;
+    font-size: 34px;
+    margin-bottom: 200px;
+  }
+
+  @include desktop {
+    line-height: 1.25;
+    font-size: 36px;
+    margin-bottom: 303px;
+  }
+}
 .products-check__input {
   display: none;
 }
-.modal-buy-now__item {
-  position: relative;
-  height: auto;
-  border: 2px solid #96af8c;
-  border-radius: 15px;
-  
+
+.modal-buy-now__list {
+  @include tablet {
+    display: flex;
+  }
 }
-.modal-buy-now:first-child:before {
+.modal-buy-now__circle {
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -108px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include tel {
+    top: -105px;
+  }
+
+  @include tablet {
+    top: -120px;
+  }
+
+  @include desktop {
+    width: 302px;
+    height: 302px;
+    top: -183px;
+  }
+}
+
+.modal-buy-now__circle::before {
   content: '';
   background-size: cover;
   width: 200px;
   height: 200px;
   position: absolute;
+  top: -11px;
 
   background-image: url(../images/products/card1-tablet-1x.png);
 
- 
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/products/card1-tablet-2x.png);
+  }
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/products/card1-tablet-3x.png);
+  }
+
+  @include desktop {
+    width: 302px;
+    height: 302px;
+    top: -16px;
+
+    background-image: url(../images/products/card1-desktop-1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/products/card1-desktop-2x.png);
+    }
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      background-image: url(../images/products/card1-desktop-3x.png);
+    }
+  }
 }
+.modal-buy-now__item {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  max-width: 132px;
+  height: auto;
+  padding: 95px 16px 20px 16px;
+  border: 2px solid #96af8c;
+  border-radius: 15px;
+  &:nth-child(2) {
+    padding: 95px 13px 20px 13px;
+  }
+  &:nth-child(3) {
+    padding: 95px 13px 20px 13px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 84px;
+  }
+}
+
+.modal-buy-now__img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -2;
+}
+.modal-buy-now__img::before {
+  position: absolute;
+  z-index: 100;
+
+  content: ' ';
+  display: inline-block;
+  width: 132px;
+  height: 132px;
+  background-color: #96af8c;
+  // border-radius: 50%;
+}
+// .modal-buy-now__item:nth-child(1)::before {
+//   content: '';
+//   background-size: cover;
+//   background-color: #96af8c;
+//   border-radius: 50%;
+//   width: 130px;
+//   height: 130px;
+//   position: absolute;
+//   top: -50%;
+//   left: 0;
+//   // transform: translate(-50% -50%);
+
+//   // background-image: url(../images/modals/buy-now-modal/photo1-desktop-1x.png);
+//   // background-position: 50%;
+// }
 .modal-buy-now__title {
-  font-size: 20px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $color-text-secondary;
-  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  /* identical to box height */
+
+  letter-spacing: 0.04em;
 
   @include tablet {
     font-size: 22px;
