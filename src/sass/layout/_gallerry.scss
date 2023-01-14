@@ -1,17 +1,16 @@
-// @media screen and (min-width: 480px) {
-// }
-// @media screen and (min-width: 768px) {
-// }
-// @media screen and (min-width: 1200px) {
-// }
-// .container {
-//   position: relative;
-// }
-// .gallery {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-// }
+.gallery {
+  transform: translateY(-32px);
+  @media screen and (min-width: 480px) {
+    transform: translateY(-30px);
+  }
+  @media screen and (min-width: 768px) {
+    transform: translateY(-144px);
+  }
+  @media screen and (min-width: 1200px) {
+    transform: translateY(-98px);
+  }
+}
+
 .gallery--container {
   max-width: 100vw;
   margin: 0 auto;
