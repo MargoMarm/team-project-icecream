@@ -58,6 +58,19 @@
 
   text-align: center;
 }
+.customer-reviews__title {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1.23;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $color-text-secondary;
+  text-align: center;
+
+  @extend %visually-hidden;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
