@@ -1,4 +1,4 @@
-.hero__container {
+.hero-container {
     position: relative;
     width: 100%;
     margin: 0 auto;
@@ -20,13 +20,13 @@
         }
 } 
 
-.hero__container--wrap {
+.hero-content__wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.hero__title--container {
+.hero {
     max-width: 247px;
         @media (min-width:1200px) {
         max-width: 367px;
@@ -101,13 +101,13 @@
         }
 }
 
-.hero__about {
+.hero-about {
     @media (max-width:767px) {
     display: none;
     }
 }
 
-.hero__about--item {
+.hero-about__item {
     text-align: right;
         &:not(:last-child) {
         margin-bottom: 20px;
@@ -119,7 +119,7 @@
         }
 }
 
-.hero__about--number {
+.hero-about__number {
     font-weight: 900;
     font-size: 28px;
     line-height: 1.21;
@@ -132,7 +132,7 @@
         }
 }
 
-.hero__about--text {
+.hero-about__text {
     font-size: 8px;
     line-height: 1.25;
     color: $color-text-main;
@@ -142,7 +142,7 @@
         }
 }
 
-.hero__wrapper {
+.hero-wrapper {
     max-width: 139px;
     margin-left: 215px;
     margin-top: 40px;
@@ -158,7 +158,7 @@
         }
 }
 
-.hero__wrapper--text {
+.hero-wrapper__text {
     font-size: 12px;
     line-height: 1.4;    
     color: $color-text-main;
@@ -169,7 +169,7 @@
         }
 }
 
-.hero__wrapper--btn {
+.hero-wrapper__btn {
     display: block;
     border: none;
     background-color: transparent;
@@ -177,7 +177,7 @@
     @extend %cursor;
 }
 
-.hero__wrapper--arrow {
+.hero-wrapper__arrow {
     fill: $color-text-main;
 }
 
