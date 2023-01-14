@@ -1,18 +1,21 @@
-// // @media screen and (min-width: 480px) {
-// // }
-// // @media screen and (min-width: 768px) {
-// // }
-// // @media screen and (min-width: 1200px) {
-// // }
-
-// // .page {
-// //   min-width: 320px;
-// //   margin: 0;
-// //   padding: 10px 0;
-// // }
+// @media screen and (min-width: 480px) {
+// }
+// @media screen and (min-width: 768px) {
+// }
+// @media screen and (min-width: 1200px) {
+// }
+// .container {
+//   position: relative;
+// }
+// .gallery {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
 .gallery--container {
   max-width: 280px;
   margin: 0 auto;
+  overflow: hidden;
   @media screen and (min-width: 480px) {
     max-width: 440px;
   }
@@ -24,248 +27,112 @@
   }
 }
 .secret-name {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
+  @extend %visually-hidden;
+}
+.gallery__items:hover #slideset {
+  animation-play-state: paused;
+}
+#slideset {
+  height: 422px;
+  position: relative;
   overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
 }
-.gallery__items {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
+#slideset > * {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  animation: 12s autoplay infinite ease-in-out;
 }
+.gallery__item:hover #slideset {
+  animation-play-state: paused;
+}
+@keyframes autoplay {
+  0% {
+    top: 100%;
+  }
+  4% {
+    top: 0%;
+  }
+  33.33% {
+    top: 0%;
+  }
+  37.33% {
+    top: -100%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+#slideset > *:nth-child(1) {
+  animation-delay: 0s;
+}
+#slideset > *:nth-child(2) {
+  animation-delay: 4s;
+}
+#slideset > *:nth-child(3) {
+  animation-delay: 8s;
+}
+
 .gallery__item {
   position: relative;
-  //   width: 500px;
-  @media screen and (min-width: 480px) {
-  }
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc(100% / 3);
+  img {
+    border-radius: 24px;
   }
 }
 
-.card {
-  margin: 0 2px;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   display: inline-block;
-  color: #fff;
+.card__content {
+  position: absolute;
+  bottom: 9px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 30px;
   overflow: hidden;
+  border-radius: 15px 30px;
+  color: $color-third-card;
+  text-shadow: 1px 1px 2px $color-btn-text;
+  background: $color-second-card;
+  transition: height $cubic;
   @media screen and (min-width: 480px) {
-    margin: 0 5px;
+    border-radius: 15px 24px;
+    width: 45%;
+    height: 40px;
   }
   @media screen and (min-width: 768px) {
+    bottom: 9.5px;
+    width: 30%;
+    height: 50px;
   }
   @media screen and (min-width: 1200px) {
+    border-radius: 15px 23px;
+    height: 70px;
   }
-  //   .card__content,
-  //   .card__hover,
-  //   .card__image {
-  //     top: 0;
-  //     left: 0;
-  //     width: 100%;
-  //     height: auto;
-  //   }
-  .card__image {
-    width: 150%;
-    position: relative;
-  }
-  .card__hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    background: rgba($color: #000000, $alpha: 0.7);
-    margin-bottom: 8px;
-    opacity: 0;
-    transition: all 0.3s;
+  .card__title {
+    font-size: 10px;
     @media screen and (min-width: 480px) {
+      font-size: 12px;
     }
     @media screen and (min-width: 768px) {
+      font-size: 15px;
     }
     @media screen and (min-width: 1200px) {
-      margin-bottom: 14px;
+      font-size: 20px;
     }
   }
-  .card__content {
-    position: absolute;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0;
-    transition: all 0.3s;
-    .card__title {
-      color: $color-third-card;
+  .card__description {
+    color: $color-btn-disabled;
+    font-size: 7px;
+    @media screen and (min-width: 480px) {
       font-size: 10px;
-      padding: 25px 10px 10px 10px;
-      letter-spacing: 0.3rem;
-      text-transform: uppercase;
-      text-align: center;
-      &.small {
-        font-size: 20px;
-      }
-      @media screen and (min-width: 480px) {
-      }
-      @media screen and (min-width: 768px) {
-      }
-      @media screen and (min-width: 1200px) {
-        font-size: 30px;
-        padding: 60 10px 10px 10px;
-        &.small {
-          font-size: 20px;
-        }
-      }
     }
-    .card__description {
-      color: $color-second-card;
-      font-size: 7px;
-      letter-spacing: 0.1rem;
-      text-transform: uppercase;
-      text-align: center;
-      //   &.small {
-      //     font-size: 20px;
-      //   }
-      @media screen and (min-width: 480px) {
-      }
-      @media screen and (min-width: 768px) {
-      }
-      @media screen and (min-width: 1200px) {
-        font-size: 30px;
-        padding: 0 10px 10px 10px;
-        letter-spacing: 0.3rem;
-        text-transform: uppercase;
-        text-align: center;
-        &.small {
-          font-size: 20px;
-        }
-      }
+    @media screen and (min-width: 768px) {
+      color: $color-adress;
+      font-size: 12px;
     }
-  }
-  &:hover {
-    .card__content,
-    .card__hover {
-      opacity: 1;
-    }
-    .card__image {
-      transform: scale(1);
+    @media screen and (min-width: 1200px) {
+      font-size: 15px;
     }
   }
 }
-
-// // .explosion {
-// //   display: none;
-// //   position: fixed;
-// //   background: #fff;
-// //   top: 0;
-// //   left: 0;
-// //   width: 100vw;
-// //   height: 100vh;
-// //   min-width: 320px;
-// //   min-height: 600px;
-
-// //   z-index: 999;
-// //   opacity: 0;
-
-// //   &.explosion_Opened,
-// //   &.explosion_Opening {
-// //     display: block;
-// //   }
-// //   //   &.explosion_Opening {
-// //   //     transition: none;
-// //   //   }
-// //   .explosionControls {
-// //     margin: 3000px;
-// //     display: flex;
-// //     flex-direction: column;
-// //     justify-content: center;
-// //     height: 50%;
-// //     width: 3rem;
-// //     position: absolute;
-// //     top: 0;
-// //     right: 10%;
-// //     z-index: 7;
-// //     color: #000000;
-// //     .explosionClose {
-// //       position: absolute;
-// //       top: 0;
-// //       width: 2rem;
-// //       height: 2rem;
-// //       border: none;
-// //       background: none;
-// //       background-repeat: no-repeat;
-// //       background-position: center;
-// //       background-image: url('../images/gallery/svg/close.svg');
-// //       @extend %cursor;
-// //     }
-// //     .explosionCounter {
-// //       font-weight: bold;
-// //       font-size: 1.2rem;
-// //       padding: 10px 0;
-// //     }
-// //     .explosionNavs {
-// //       display: flex;
-// //       flex-direction: column;
-// //       align-items: center;
-// //       .explosionNav {
-// //         width: 2rem;
-// //         height: 2rem;
-// //         border-radius: 50%;
-// //         border: 3px solid black;
-// //         background-color: transparent;
-// //         background-repeat: no-repeat;
-// //         background-position: center;
-// //         text-align: center;
-// //         opacity: 1;
-// //         transition: background-color $cubic, opacity $cubic;
-// //         &:hover {
-// //           background: #000;
-// //         }
-
-// //         &:disabled {
-// //           pointer-events: none;
-// //           opacity: 0.3;
-// //         }
-
-// //         @extend %cursor;
-// //         &.explosionNavPrev {
-// //           background-image: url('../images/gallery/svg/arrow-up.svg');
-// //           &:hover {
-// //             background-image: url('../images/gallery/svg/arrow-up-white.svg');
-// //           }
-// //         }
-// //         &.explosionNavNext {
-// //           background-image: url('../images/gallery/svg/arrow-down.svg');
-// //         }
-// //         &:hover {
-// //           background-image: url('../images/gallery/svg/arrow-down-white.svg');
-// //         }
-// //       }
-// //     }
-// //   }
-// //   .explosionImages {
-// //     display: block;
-// //     object-fit: cover;
-// //     margin: 7px;
-// //     width: 100%;
-// //     height: auto;
-// //     position: absolute;
-// //     z-index: 2;
-// //     // opacity: 0.3;
-// //     transform: translate3d(0, 0, 0) scale(1);
-// //     transform-origin: 50% 50%;
-// //     backface-visibility: hidden;
-// //     transition: transform $cubic, opacity $cubic;
-// //   }
-// // }
