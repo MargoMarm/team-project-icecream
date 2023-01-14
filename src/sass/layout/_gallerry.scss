@@ -25,6 +25,10 @@
   @media screen and (min-width: 1200px) {
     max-width: 1030px;
   }
+  &:hover #slideset {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+  }
 }
 .secret-name {
   @extend %visually-hidden;
@@ -122,13 +126,13 @@
     }
   }
   .card__description {
-    color: $color-btn-disabled;
+    color: $color-adress;
+    text-shadow: 0.1px 0.1px 1px $color-btn-text;
     font-size: 7px;
     @media screen and (min-width: 480px) {
       font-size: 10px;
     }
     @media screen and (min-width: 768px) {
-      color: $color-adress;
       font-size: 12px;
     }
     @media screen and (min-width: 1200px) {
