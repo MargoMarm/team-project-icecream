@@ -40,6 +40,9 @@
   height: 422px;
   position: relative;
   overflow: hidden;
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 #slideset > * {
   position: absolute;
@@ -87,32 +90,47 @@
 .card__content {
   position: absolute;
   bottom: 9px;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  height: 30px;
+  left: 20px;
+  width: 87%;
+  height: 12px;
   overflow: hidden;
-  border-radius: 15px 30px;
-  color: $color-third-card;
-  text-shadow: 1px 1px 2px $color-btn-text;
-  background: $color-second-card;
-  transition: height $cubic;
+  border-radius: 15px;
+  color: $color-btn-text;
+  background: #efd3788a;
   @media screen and (min-width: 480px) {
-    border-radius: 15px 24px;
-    width: 45%;
-    height: 40px;
+    left: 12px;
+    width: 94%;
+    height: 15px;
   }
   @media screen and (min-width: 768px) {
+    left: 10px;
     bottom: 9.5px;
-    width: 30%;
-    height: 50px;
+    width: 97%;
+    height: 20px;
   }
   @media screen and (min-width: 1200px) {
-    border-radius: 15px 23px;
-    height: 70px;
+    left: 7px;
+    bottom: 9.5px;
+    width: 98.7%;
+    height: 30px;
   }
+  p {
+    margin-top: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    @media screen and (min-width: 480px) {
+      gap: 30px;
+    }
+    @media screen and (min-width: 768px) {
+      gap: 70px;
+    }
+    @media screen and (min-width: 1200px) {
+      gap: 150px;
+    }
+  }
+
   .card__title {
     font-size: 10px;
     @media screen and (min-width: 480px) {
@@ -126,8 +144,7 @@
     }
   }
   .card__description {
-    color: $color-adress;
-    text-shadow: 0.1px 0.1px 1px $color-btn-text;
+    // text-shadow: 0.1px 0.1px 1px $color-btn-text;
     font-size: 7px;
     @media screen and (min-width: 480px) {
       font-size: 10px;
