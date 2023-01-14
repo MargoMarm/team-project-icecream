@@ -18,19 +18,24 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 1.22;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
 
     color: #FCFCFC;
 
+    max-width: 247px;
+
     padding-left: 6px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     @media (min-width: 768px) {
-        margin-left: 17px;
         font-size: 26px;
+        max-width: none;
         }
     @media (min-width: 1200px) {
         font-size: 30px;
-        margin-left: 0;
+        font-weight: 400;
+        margin-bottom: 14px;
+        letter-spacing: 0.06em;
         }
 }
 
@@ -43,24 +48,27 @@
     
     color: #FCFCFC;
 
+    max-width: 200px;
+
     margin-bottom: 60px;
     padding-left: 4;
     @media (min-width: 768px) {
-        margin-left: 17px;
-        font-size: 68px;
+        font-size: 48px;
         margin-bottom: 32px;
+        letter-spacing: 0.06em;
+        max-width: 352px;
         }
     @media (min-width: 1200px) {
         font-size: 58px;
         margin-left: 0px;
         margin-bottom: 60px;
+        max-width: none;
         }
 }
 
 .footer__wrap__soc{
     @media (min-width: 768px) {
-        margin-bottom: 60px;
-        margin-top: 61px;
+        margin: auto 0;
         }
             @media (min-width: 1200px) {
         margin-bottom: 0px;
@@ -86,7 +94,7 @@
 .footer__tel {
     font-weight: 700;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
 
     text-align: right;
 
@@ -106,7 +114,7 @@
 .footer__tel__number {
     font-weight: 700;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     
     text-align: right;
     
@@ -130,7 +138,7 @@
 .footer__downtext__first {
     font-weight: 700;
     font-size: 14px;
-    line-height: 152%;
+    line-height: 1.52;
     
     text-align: center;
     
@@ -144,7 +152,7 @@
 .footer__downtext__second {
     font-weight: 700;
     font-size: 14px;
-    line-height: 152%;
+    line-height: 1.52;
 
     text-align: center;
 
