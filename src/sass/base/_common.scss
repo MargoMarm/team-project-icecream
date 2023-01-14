@@ -33,10 +33,10 @@ a {
   margin: 0 auto;
   padding: 0 20px;
 
-//   @media (min-width: 480px) {
-//     width: 480px;
-//     padding: 0 20px;
-//   }
+  @media (min-width: 480px) {
+    width: 480px;
+    padding: 0 20px;
+  }
 
   @media (min-width: 768px) {
     width: 768px;
