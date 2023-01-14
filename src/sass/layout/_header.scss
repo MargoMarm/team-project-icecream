@@ -26,6 +26,43 @@
   }
 }
 
+.menu-desktop .button-modal {
+  position: absolute;
+  top: 26px;
+  right: 87px;
+
+  display: block;
+
+  width: 152px;
+  height: 42px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: $color-btn-text;
+
+  background-color: $color-accent;
+  transition: $cubic;
+
+  border-radius: 10px;
+  border: none;
+
+  @extend %cursor;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $color-btn-hover;
+  }
+  &:focus {
+    background-color: $color-btn-hover;
+    color: $color-btn-text-secondary;
+  }
+}
+
 //  НАВИГАЦИЯ!!!
 
 .navigation {
@@ -33,9 +70,14 @@
   align-items: center;
 }
 
+// ЛОГО
+.logo {
+  @extend %cursor;
+}
+
 // КНОПКА МЕНЮ
 
-.menu-button-open {
+.menu-toggle {
   margin-left: auto;
 
   padding: 0;
@@ -76,8 +118,13 @@
   font-size: 32px;
   line-height: 1.21;
 
+  padding-top: 32px;
+  padding-bottom: 13px;
+
   color: $color-text-main;
   transition: $cubic;
+
+  @extend %cursor;
 
   @media screen and (min-width: 1200px) {
     font-size: 16px;
@@ -94,29 +141,28 @@
 
 .menu-container {
   position: absolute;
-  top: 103px;
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
 
-  z-index: 2;
-
-  // transform: translateX(100%);
-  // transition: transform 250ms ease-in-out;
-
   padding-top: 12px;
   padding-left: 20px;
   padding-right: 20px;
+
+  background-color: $color-bg-main;
+  transform: translateX(100%);
+  transition: transform $cubic;
+
+  z-index: 2;
+
+  overflow: scroll;
 
   @media screen and (min-width: 480px) {
     padding-top: 14px;
   }
 
   @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
     width: 100%;
 
     padding-top: 20px;
@@ -125,20 +171,25 @@
   }
 
   @media screen and (min-width: 1200px) {
-    position: static;
-    display: block;
+    display: none;
+  }
 
-    padding-top: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
+  .menu-container.is-open {
+    transform: translateX(0);
   }
 }
 
-.menu-button-close {
-  position: absolute;
-  top: -70px;
-  right: 20px;
+.menu-container__item {
+  display: flex;
+  align-items: center;
+}
 
+.mobile-logo {
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+.menu-container .menu-toggle {
   padding: 0;
 
   width: 32px;
@@ -147,15 +198,15 @@
   background-color: transparent;
   fill: $color-btn-text-secondary;
 
-  @media screen and (min-width: 480px) {
-    top: -82px;
-    right: 20px;
-  }
+  // @media screen and (min-width: 480px) {
+  //   top: -82px;
+  //   right: 20px;
+  // }
 
-  @media screen and (min-width: 768px) {
-    top: -72px;
-    right: 32px;
-  }
+  // @media screen and (min-width: 768px) {
+  //   top: -72px;
+  //   right: 32px;
+  // }
 
   @media screen and (min-width: 1200px) {
     display: none;
@@ -169,17 +220,9 @@
 
   margin-bottom: 40px;
 
-  // transform: translateX(100%);
-
-  // transition: transform $cubic;
-
   @media screen and (min-width: 1200px) {
     display: none;
   }
-}
-
-.mobile-menu.is-open {
-  transform: translateX(0);
 }
 
 .mobile-menu__item {
@@ -210,9 +253,8 @@
   }
 }
 
-.button-modal {
+.menu-container .button-modal {
   display: block;
-
   margin-left: auto;
   margin-right: auto;
 
@@ -232,15 +274,7 @@
   border: none;
 
   @media screen and (min-width: 768px) {
-    position: absolute;
-
-    top: -75px;
-    right: 85px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    top: 28px;
-    right: 16px;
+    display: none;
   }
 
   &:hover {
@@ -253,6 +287,7 @@
 }
 
 .button-modal__icon {
+  margin-left: 4px;
   fill: $color-btn-text;
 
   &:hover {
