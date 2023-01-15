@@ -78,6 +78,7 @@
   height: 132px;
   position: absolute;
   top: -7px;
+  left: 0;
 
   background-image: url(../images/products/card1-tablet-1x.png);
 
@@ -325,8 +326,10 @@
 .products-form__input:focus {
   border: 1px solid $color-accent;
   outline: none;
+  &:not(:placeholder-shown):required:invalid {
+    border-color: #f44336;
+  }
 }
-
 .products-form__input-commentary {
   resize: none;
 }
