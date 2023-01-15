@@ -16,7 +16,7 @@
 
 // Стилі для кнопки закриття
 
-.modal__cross {
+.modal__close-btn {
   width: 20px;
   height: 20px;
   position: absolute;
@@ -24,7 +24,30 @@
   right: 12px;
   fill: $color-text-secondary;
   @extend %cursor;
+  @extend %centered;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
 
+  transition: scale $cubic, box-shadow $cubic;
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 1.3;
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+      0px 2px 1px rgb(0 0 0 / 20%);
+  }
+}
+
+.modal__cross {
+  width: 20px;
+  height: 20px;
   @include tablet {
     width: 24px;
     height: 24px;
@@ -105,6 +128,14 @@
   @include tablet {
     font-size: 14px;
     line-height: 1.21;
+  }
+  &:hover,
+  &:focus {
+    background-color: $color-btn-hover;
+  }
+
+  &:focus {
+    color: $color-modal-bg;
   }
 }
 
