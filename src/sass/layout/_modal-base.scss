@@ -139,11 +139,58 @@
   }
 }
 
+
+.form__input{
+  width: 100%;
+  padding: 11px 10px;
+
+  background: $color-input;
+  border: 1px solid $color-bg-main;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $color-text-secondary;
+
+  @include tablet {
+    width: 368px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  &:nth-child(3) {
+    margin-bottom: 24px;
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  &:focus {
+    border: 1px solid $color-accent;
+    outline: none;
+  }
+}
+
+.form__input-commentary {
+  resize: none;
+}
+
+.form__input:not(:placeholder-shown):required:valid {
+  border-color: $color-bg-main;
+}
+
+.form__input:not(:placeholder-shown):required:invalid {
+  border-color: $color-input-invalid;
+}
 // На кнопку відкриття модалки
-// треба дати клас js-open-modal
-// та data-modal="id", де id унікальний
-// для кожної модалки і має співпадати
-// з data-modal="id" модалки
+// треба дати клас js-open-modal та data-modal="id", де id унікальний
+// для кожної модалки і має співпадати з data-modal="id" модалки
 
 // для div модалки обовязково дати класи
 // modal і modal--назва-секції і атрибут data-modal="id"
@@ -154,18 +201,16 @@
 // overlay не потрібно додавати, він один і він
 // автоматично буде для кожної модалки
 
-// class="modal__cross js-modal-close" - ці класи
+// class="modal__close-btn js-modal-close" - ці класи
 // дати на кнопку закриття модалки
+
+// class="modal__cross" - дати на svg закриття модалки
 
 // клас modal__title додати на заголовок модалки
 
-// Шаблон модалки
+// На всі input додати клас form__input
+// + на input коментарі додати клас form__input-commentary
 
-// <div class="modal-products modal" data-modal="1">
-
-//   <svg class="modal__cross js-modal-close" width="20" height="20">
-//     <use href="./images/sprite.svg#icon-icon-close-modal"></use>
-//   </svg>
-
-//   <p class="modal-products__title modal__title">Modal title</p>
-// </div>
+// Якщо щось незрозуміло, то звертайтесь до Мартіни 
+// + ще можете глянути модалку яу робила Мартіна 
+// і за шаблоном зробити (partials/modal-products.html)
