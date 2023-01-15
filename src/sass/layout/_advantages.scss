@@ -1,12 +1,12 @@
 .advantages {
   padding-bottom: 64px;
-  @media screen and (min-width: 480px) {
+  @include tel {
     padding-bottom: 60px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding-bottom: 204px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding-bottom: 178px;
   }
 }
@@ -15,46 +15,104 @@
   flex-direction: column;
   align-items: center;
   gap: 22px;
-  max-width: 230px;
+  max-width: 100%;
   margin: 0 auto;
-  @media screen and (min-width: 768px) {
+  @include tel {
+    align-items: flex-start;
+    max-width: 230px;
+  }
+  @include tablet {
     max-width: 616px;
     flex-direction: row;
     justify-content: center;
-    gap: 80px;
+    gap: 23px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     max-width: 1168px;
     gap: 32px;
   }
 }
 .advantages__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     gap: 12px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     gap: 36px;
   }
 }
+.advantages__item::before {
+  content: '';
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+}
+.advantages__item:nth-child(1):before {
+  background-image: url(../images/advantages/icon-cow-1x.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/advantages/icon-cow-2x.png);
+  }
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/advantages/icon-cow-3x.png);
+  }
+}
+.advantages__item:nth-child(2):before {
+  background-image: url(../images/advantages/icon-weight-1x.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/advantages/icon-weight-2x.png);
+  }
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/advantages/icon-weight-3x.png);
+  }
+}
+.advantages__item:nth-child(3):before {
+  background-image: url(../images/advantages/icon-ice-cream-1x.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/advantages/icon-ice-cream-2x.png);
+  }
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/advantages/icon-ice-cream-3x.png);
+  }
+}
 .advantages__image {
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding-bottom: 28px;
   }
 }
 .advantages__number {
+  padding-top: 66px;
   text-transform: uppercase;
   line-height: 1.22;
   font-size: 36px;
   font-weight: 700;
   letter-spacing: 0.04em;
-  @media screen and (min-width: 768px) {
+  @include tablet {
+    padding-top: 82px;
     font-size: 48px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
+    padding-top: 90px;
     font-size: 58px;
   }
 }
@@ -63,12 +121,24 @@
   line-height: 1.75;
   font-size: 12px;
   font-weight: 700;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     font-size: 14px;
     font-weight: 400;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     font-size: 16px;
     letter-spacing: 0.02em;
+  }
+}
+.show-desktop {
+  display: none;
+  @include desktop {
+    display: inline;
+  }
+}
+.not-show-desktop,
+.show-not-desktop {
+  @include desktop {
+    display: none;
   }
 }
