@@ -29,6 +29,7 @@
   }
 }
 .advantages__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,21 +41,74 @@
     gap: 36px;
   }
 }
+.advantages__item::before {
+  content: '';
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+}
+.advantages__item:nth-child(1):before {
+  background-image: url(../images/advantages/icon-cow-1x.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/advantages/icon-cow-2x.png);
+  }
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/advantages/icon-cow-3x.png);
+  }
+}
+.advantages__item:nth-child(2):before {
+  background-image: url(../images/advantages/icon-weight-1x.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/advantages/icon-weight-2x.png);
+  }
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/advantages/icon-weight-3x.png);
+  }
+}
+.advantages__item:nth-child(3):before {
+  background-image: url(../images/advantages/icon-ice-cream-1x.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/advantages/icon-ice-cream-2x.png);
+  }
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/advantages/icon-ice-cream-3x.png);
+  }
+}
 .advantages__image {
   @include tablet {
     padding-bottom: 28px;
   }
 }
 .advantages__number {
+  padding-top: 66px;
   text-transform: uppercase;
   line-height: 1.22;
   font-size: 36px;
   font-weight: 700;
   letter-spacing: 0.04em;
   @include tablet {
+    padding-top: 82px;
     font-size: 48px;
   }
   @include desktop {
+    padding-top: 90px;
     font-size: 58px;
   }
 }
