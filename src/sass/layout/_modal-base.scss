@@ -91,6 +91,10 @@
   border: none;
   @extend %cursor;
 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
   @include tablet {
     font-size: 14px;
     line-height: 1.21;
