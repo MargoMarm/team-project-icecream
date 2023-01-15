@@ -1,7 +1,6 @@
-.container {
-background-color: var(--color-bg-main);
-}
+
 .variable {
+    text-align: center;
     @media screen and (min-width: 480px) {
         display: flex;
         flex-direction: column-reverse;
@@ -15,35 +14,36 @@ background-color: var(--color-bg-main);
 
 .made__title {
     font-family: 'Seymour One', sans-serif;
-    width: 200px;
+    max-width: 200px;
     display: block;
     font-weight: 400;
     font-size: 30px;
     line-height: 1.25;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    text-align: center;
-    padding-bottom: 54px;
+    margin-bottom: 54px;
     color: #FCFCFC;
 
     margin-left: auto;
     margin-right: auto;
 
     @media screen and (min-width: 480px) {
-        padding-top: 60px;
-        padding-bottom: 12px;
+        margin-top: 60px;
+        margin-bottom: 12px;
     }
 
     @media screen and (min-width: 768px) {
-        width: 454px;
-        padding-top: 0px;
-        padding-bottom: 0px;
+      max-width: 454px;
+      
+        margin-top: 0px;
+        margin-bottom: 0px;
         font-size: 34px;
         letter-spacing: 0.06em;
+       
     }
 
     @media screen and (min-width: 1200px) {
-        width: 481px;
+     max-width: 481px;
         font-size: 36px;
     }
 }
@@ -55,23 +55,22 @@ background-color: var(--color-bg-main);
     line-height: 1.22;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    text-align: center;
-    padding-top: 60px;
-    padding-bottom: 12px;
+    margin-top: 60px;
+    margin-bottom: 12px;
     margin-left: auto;
     margin-right: auto;
     color: #FCFCFC;
 
     @media screen and (min-width: 480px) {
 
-        padding-bottom: 54px;
-        padding-top: 0px;
+        margin-bottom: 54px;
+        margin-top: 0px;
     }
 
     @media screen and (min-width: 768px) {
         width: 276px;
-        padding-bottom: 12px;
-        padding-top: 60px;
+        margin-bottom: 12px;
+        margin-top: 60px;
         font-weight: 800;
         font-size: 22px;
     }
@@ -117,31 +116,31 @@ background-color: var(--color-bg-main);
 }
 
 .made__text {
-    @media screen and (min-width: 768px) {
+font-family: 'Montserrat', sans-serif;
+font-size: 12px;
+@media screen and (min-width: 768px) {
         align-content: flex-end;
     }
 }
 
 .made__text-one {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
+    text-align: center;
+    
     line-height: 1.76;
     letter-spacing: 0.04em;
-    text-align: center;
     min-width: 220px;
     width: 220px;
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 4px;
-    color: #FCFCFC;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 4px;
+    color: #FCFCFC;
+    
 
     @media screen and (min-width: 768px) {
         display: inline-block;
-        padding-top: 80px;
-        padding-bottom: 8px;
+        margin-top: 80px;
+        margin-bottom: 8px;
         min-width: 334px;
         text-align: left;
         padding-left: 38px;
@@ -153,32 +152,30 @@ background-color: var(--color-bg-main);
         min-width: 463px;
         text-align: left;
         padding-left: 109px;
-        padding-top: 172px;
+        margin-top: 172px;
 
     }
 }
 
 .made__text-two {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
+   
     line-height: 1.62;
     letter-spacing: 0.04em;
     min-width: 220px;
     text-align: center;
     width: 220px;
-
-    padding-bottom: 10px;
+     margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
     color: #FCFCFC;
 
-    margin-left: auto;
-    margin-right: auto;
+   
 
     @media screen and (min-width: 768px) {
         display: inline-block;
         text-align: left;
         padding-left: 38px;
-        padding-bottom: 8px;
+        margin-bottom: 8px;
         line-height: 1.76;
         width: 334px;
         text-align: left;
@@ -189,14 +186,14 @@ background-color: var(--color-bg-main);
         line-height: 1.94;
         min-width: 463px;
         padding-left: 109px;
-        padding-bottom: 8px;
+        margin-bottom: 8px;
     }
 }
 
 .made__text-three {
-    font-family: 'Montserrat', sans-serif;
+    
     display: none;
-    font-weight: 400;
+
     font-size: 12px;
     line-height: 1.94;
     letter-spacing: 0.04em;
@@ -234,15 +231,15 @@ background-color: var(--color-bg-main);
     line-height: 1.28;
     letter-spacing: 0.03em;
     background-color: #F8D24E;
-    color: var(--black-color);
-    min-width: 164px;
+    color: #000000;
+    width: 164px;
     height: 42px;
     justify-content: center;
     text-align: center;
     align-items: center;
-    padding: 12px 34px;
+   
     border-radius: 10px;
-    column-gap: 7.75px;
+    gap: 4px;
     border: none;
     margin: 0 auto;
     margin-bottom: 50px;
@@ -254,6 +251,7 @@ background-color: var(--color-bg-main);
 
     &:focus {
         color: #FCFCFC;
+        fill: currentColor;
     }
 
     &:disabled {
@@ -265,12 +263,14 @@ background-color: var(--color-bg-main);
         }
     @media screen and (min-width: 768px) {
         display: inline-flex;
-        flex-direction: column;
+        flex-direction: row;
         margin-left: 38px;
+        
+            
     }
 
     @media screen and (min-width: 1200px) {
-        flex-direction: column;
+        flex-direction: row;
         margin-left: 109px;
 
     }
