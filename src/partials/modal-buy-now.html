@@ -57,4 +57,30 @@
 
     <button type="button" class="products-check__button"></button>
   </div> -->
+  <form class="modal-products__form products-form" name="products-form">
+    <input
+      type="text"
+      class="products-form__input"
+      placeholder="Name"
+      required
+      minlength="5"
+    />
+
+    <input
+      type="tel"
+      class="products-form__input"
+      placeholder="Phone"
+      required
+      pattern="[0-9]{12}"
+    />
+
+    <textarea
+      name="commentary"
+      rows="3"
+      class="products-form__input products-form__input-commentary"
+      placeholder="Comment"
+    ></textarea>
+
+    <button type="submit" class="modal__submit-btn">Submit</button>
+  </form>
 </div>
