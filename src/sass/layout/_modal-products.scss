@@ -207,13 +207,21 @@
       margin-bottom: 32px;
     }
   }
+
+  &:focus {
+    border: 1px solid $color-accent;
+    outline: none;
+  }
 }
 
-.products-form__input:focus {
-  border: 1px solid $color-accent;
-  outline: none;
+.products-form__input:not(:placeholder-shown):required:valid {
+  border-color: $color-bg-main;
 }
 
-.products-form__input-commentary {
+.products-form__input:not(:placeholder-shown):required:invalid {
+  border-color: $color-input-invalid;
+}
+
+.products-form__input .products-form__input-commentary {
   resize: none;
 }
