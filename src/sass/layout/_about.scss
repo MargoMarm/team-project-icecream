@@ -1,18 +1,32 @@
-
-.variable {
+.about{
+    padding-top: 61px;
+    padding-bottom: 50px;
+    @media screen and (min-width: 480px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+.about__main {
     text-align: center;
+    padding-bottom: 54px;
+   
+    
     @media screen and (min-width: 480px) {
         display: flex;
         flex-direction: column-reverse;
+        padding-bottom: 54px;
     }
 
-    @media screen and (min-width: 768px) {
-
-        flex-direction: column;
-    }
+            @media screen and (min-width: 768px) {
+                   flex-direction: column;
+                   padding-bottom: 80px;
+            }
+                   @media screen and (min-width: 1200px) {
+                          padding-bottom: 82px;
+                    }
 }
 
-.made__title {
+.about__title {
     font-family: 'Seymour One', sans-serif;
     max-width: 200px;
     display: block;
@@ -21,66 +35,54 @@
     line-height: 1.25;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    margin-bottom: 54px;
-    color: #FCFCFC;
-
     margin-left: auto;
     margin-right: auto;
+    color: #FCFCFC;
 
-    @media screen and (min-width: 480px) {
-        margin-top: 60px;
-        margin-bottom: 12px;
-    }
+        @media screen and (min-width: 480px) {
+            margin-bottom: 12px;
+               }
 
-    @media screen and (min-width: 768px) {
-      max-width: 454px;
-      
-        margin-top: 0px;
-        margin-bottom: 0px;
-        font-size: 34px;
-        letter-spacing: 0.06em;
-       
-    }
+               @media screen and (min-width: 768px) {
+                
+                      max-width: 100%;
+                      margin-bottom: 0px;
+                      font-size: 34px;
+                      letter-spacing: 0.06em;
+                    }
 
-    @media screen and (min-width: 1200px) {
-     max-width: 481px;
-        font-size: 36px;
-    }
+                      @media screen and (min-width: 1200px) {
+                            max-width: 100%;
+                            font-size: 36px;
+                        }
 }
 
-.made__paragraph {
+.about__paragraph {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    margin-top: 60px;
-    margin-bottom: 12px;
     margin-left: auto;
-    margin-right: auto;
+        margin-right: auto;
     color: #FCFCFC;
 
-    @media screen and (min-width: 480px) {
-
-        margin-bottom: 54px;
-        margin-top: 0px;
+        @media screen and (min-width: 480px) {
+               padding-top: 0px;
     }
 
-    @media screen and (min-width: 768px) {
-        width: 276px;
-        margin-bottom: 12px;
-        margin-top: 60px;
-        font-weight: 800;
-        font-size: 22px;
-    }
+               @media screen and (min-width: 768px) {
+                      width: 276px;
+                      margin-bottom: 12px;
+                      font-weight: 800;
+                      font-size: 22px;
+                    }
 
-    @media screen and (min-width: 1200px) {
-        width: 376px;
-        font-size: 30px;
-
-
-    }
+                    @media screen and (min-width: 1200px) {
+                           width: 376px;
+                           font-size: 30px;
+                    }
 }
 
 .buffalo {
@@ -97,30 +99,29 @@
     @media screen and (min-width: 768px) {
         display: flex;
         float: left;
-        
-        margin-top: 98px;
+        margin-top: 18px;
         width: 330px;
         height: 330px;
         margin-bottom: 60px;
         box-shadow: 0px -26px 0px 1px rgba(248, 210, 78, 0.7);
     }
 
-    @media screen and (min-width: 1200px) {
-        width: 490px;
-        height: 490px;
-        margin-top: 121px;
-        margin-left: 17px;
-        box-shadow: 0px -39px 0px 1px rgba(248, 210, 78, 0.7);
-    }
+            @media screen and (min-width: 1200px) {
+                    width: 490px;
+                    height: 490px;
+                    margin-top: 39px;
+                    margin-left: 0px;
+                    box-shadow: 0px -39px 0px 1px rgba(248, 210, 78, 0.7);
+                }
 
 }
 
 .made__text {
 font-family: 'Montserrat', sans-serif;
 font-size: 12px;
-@media screen and (min-width: 768px) {
-        align-content: flex-end;
-    }
+        @media screen and (min-width: 768px) {
+               align-content: flex-end;
+            }
 }
 
 .made__text-one {
@@ -139,11 +140,11 @@ font-size: 12px;
 
     @media screen and (min-width: 768px) {
         display: inline-block;
-        margin-top: 80px;
+        margin-top: 0px;
         margin-bottom: 8px;
         min-width: 334px;
         text-align: left;
-        padding-left: 38px;
+        margin-left: 38px;
 
     }
 
@@ -151,8 +152,8 @@ font-size: 12px;
         font-size: 16px;
         min-width: 463px;
         text-align: left;
-        padding-left: 109px;
-        margin-top: 172px;
+        margin-left: 109px;
+    margin-top: 90px;
 
     }
 }
@@ -169,12 +170,13 @@ font-size: 12px;
     margin-bottom: 10px;
     color: #FCFCFC;
 
-   
-
+    @media screen and (min-width: 480px) {
+        margin-bottom:24px;
+    }
     @media screen and (min-width: 768px) {
         display: inline-block;
         text-align: left;
-        padding-left: 38px;
+        margin-left: 38px;
         margin-bottom: 8px;
         line-height: 1.76;
         width: 334px;
@@ -185,7 +187,7 @@ font-size: 12px;
         font-size: 14px;
         line-height: 1.94;
         min-width: 463px;
-        padding-left: 109px;
+        margin-left: 109px;
         margin-bottom: 8px;
     }
 }
@@ -206,7 +208,7 @@ font-size: 12px;
     @media screen and (min-width: 768px) {
         display: inline-block;
         text-align: left;
-        padding-left: 38px;
+        margin-left: 38px;
         width: 336px;
         text-align: left;
         margin-bottom: 32px;
@@ -216,7 +218,7 @@ font-size: 12px;
         font-size: 14px;
         line-height: 1.94;
         min-width: 463px;
-        padding-left: 109px;
+        margin-left: 109px;
         margin-bottom: 54px;
     }
 }
@@ -237,14 +239,12 @@ font-size: 12px;
     justify-content: center;
     text-align: center;
     align-items: center;
-   
     border-radius: 10px;
     gap: 4px;
     border: none;
     margin: 0 auto;
-    margin-bottom: 50px;
     cursor: pointer;
-
+    
     &:hover {
         background-color: #0A8817;
     }
@@ -258,9 +258,7 @@ font-size: 12px;
         color: #000000;
         background-color: #ABABAB;
     }
-        @media screen and (min-width: 480px) {
-            margin-bottom: 60px;
-        }
+       
     @media screen and (min-width: 768px) {
         display: inline-flex;
         flex-direction: row;
