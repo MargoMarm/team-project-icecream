@@ -13,10 +13,14 @@
 .advantages__items {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 22px;
-  max-width: 230px;
+  max-width: 100%;
   margin: 0 auto;
+  @include tel {
+    align-items: flex-start;
+    max-width: 230px;
+  }
   @include tablet {
     max-width: 616px;
     flex-direction: row;
