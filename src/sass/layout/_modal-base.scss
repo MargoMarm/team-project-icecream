@@ -10,6 +10,10 @@
   z-index: 20;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 // Стилі для кнопки закриття
 
 .modal__cross {
@@ -67,6 +71,9 @@
   padding-bottom: 28px;
   padding-left: 28px;
   padding-right: 28px;
+
+  max-height: 85%;
+  overflow: auto;
 
   @include tablet {
     padding-top: 32px;
