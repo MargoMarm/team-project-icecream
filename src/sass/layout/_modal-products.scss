@@ -1,0 +1,219 @@
+.modal-products {
+  border: 2px solid $color-accent;
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include tablet {
+    width: 568px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.modal-products__title {
+  margin-bottom: 27px;
+  width: 142px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
+    margin-bottom: 31px;
+    width: 100%;
+  }
+}
+
+.modal-products__circle {
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  border-radius: 50%;
+  width: 132px;
+  height: 132px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 22px;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+}
+
+.modal-products__circle::before {
+  content: '';
+  background-size: cover;
+  width: 132px;
+  height: 132px;
+  position: absolute;
+  top: -7px;
+
+  background-image: url(../images/modals/about-product-modal/photo1-desktop-1x.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/modals/about-product-modal/photo1-desktop-2x.png);
+  }
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    background-image: url(../images/modals/about-product-modal/photo1-desktop-3x.png);
+  }
+}
+
+.pruducts-calories {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  @include tablet {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 48px;
+  }
+}
+
+.pruducts-calories__item {
+  color: $color-text-secondary;
+}
+
+.pruducts-calories__name {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  font-size: 10px;
+  line-height: 1.2;
+
+  width: 53px;
+  height: 72px;
+  padding-bottom: 8px;
+  border: 2px solid $color-modal-accent;
+  border-radius: 40px;
+  position: relative;
+
+  @include tablet {
+    font-size: 12px;
+    line-height: 1.25;
+
+    width: 65px;
+    height: 90px;
+
+    padding-bottom: 12px;
+  }
+}
+
+.pruducts-calories__quantity {
+  @extend %centered;
+
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 2.8;
+
+  position: absolute;
+  top: -1px;
+  width: 43px;
+  height: 43px;
+
+  background: $color-modal-accent;
+  border: 2px solid $color-modal-accent;
+  box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+  border-radius: 50%;
+
+  @include tablet {
+    font-size: 12px;
+    line-height: 2.33;
+
+    width: 53px;
+    height: 53px;
+  }
+}
+
+.products-ingredients {
+  color: $color-text-secondary;
+}
+
+.products-ingredients__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.products-ingredients__name-and-quantity {
+  font-size: 14px;
+  line-height: 1.76;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 48px;
+  }
+}
+
+.products-ingredients__name {
+  text-align: left;
+}
+
+.products-ingredients__quantity {
+  text-align: right;
+}
+
+.ingredients-name__item:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.ingredients-quantity__item:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+// -----------------------------------------------------------------
+.products-form__input {
+  width: 100%;
+  padding: 11px 10px;
+
+  background: $color-input;
+  border: 1px solid $color-bg-main;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $color-text-secondary;
+
+  @include tablet {
+    width: 368px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  &:nth-child(3) {
+    margin-bottom: 24px;
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.products-form__input:focus {
+  border: 1px solid $color-accent;
+  outline: none;
+}
+
+.products-form__input-commentary {
+  resize: none;
+}
