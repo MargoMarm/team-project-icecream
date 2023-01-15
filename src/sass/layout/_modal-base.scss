@@ -1,0 +1,129 @@
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+// Стилі для кнопки закриття
+
+.modal__cross {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  fill: $color-text-secondary;
+  @extend %cursor;
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// стилі для заголовка модалки
+
+.modal__title {
+  font-family: 'Seymour One', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: $color-text-secondary;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+// Стилі для модалок
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+
+  background-color: $color-modal-bg;
+
+  border-radius: 10px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 28px;
+  padding-right: 28px;
+
+  @include tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  //   Наступні стилі всі собі створюють
+  //   клас і задають індивідуальні стилі
+  //   width:
+}
+
+.modal__submit-btn {
+  padding: 12px 34px;
+  color: $color-text-secondary;
+  background-color: $color-accent;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  border-radius: 10px;
+  border: none;
+  @extend %cursor;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
+
+// На кнопку відкриття модалки
+// треба дати клас js-open-modal
+// та data-modal="id", де id унікальний
+// для кожної модалки і має співпадати
+// з data-modal="id" модалки
+
+// для div модалки обовязково дати класи
+// modal і modal--назва-секції і атрибут data-modal="id"
+// id те саме що і на кнопці відкривання модалки
+
+// НАПРИКЛАД: class="products-modal modal" data-modal="id"
+
+// overlay не потрібно додавати, він один і він
+// автоматично буде для кожної модалки
+
+// class="modal__cross js-modal-close" - ці класи
+// дати на кнопку закриття модалки
+
+// клас modal__title додати на заголовок модалки
+
+// Шаблон модалки
+
+// <div class="modal-products modal" data-modal="1">
+
+//   <svg class="modal__cross js-modal-close" width="20" height="20">
+//     <use href="./images/sprite.svg#icon-icon-close-modal"></use>
+//   </svg>
+
+//   <p class="modal-products__title modal__title">Modal title</p>
+// </div>
