@@ -28,7 +28,6 @@
   text-transform: uppercase;
 }
 
-
 .modal-buy-now__list {
   @include tablet {
     display: flex;
@@ -188,7 +187,7 @@
   }
 }
 .modal-buy-now__item:nth-child(3) {
-    border: 2px solid #d6936d;
+  border: 2px solid #d6936d;
 
   padding-top: 95px;
   padding-bottom: 20px;
@@ -255,7 +254,7 @@
   height: 100%;
 }
 .products-check__input {
-  // display: none;
+  display: none;
 }
 
 .modal-buy-now__item--green:hover {
