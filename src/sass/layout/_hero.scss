@@ -1,0 +1,219 @@
+.hero-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 20px 236px;
+    
+        @media (min-width:480px) {
+            width: 480px;
+            padding: 40px 20px 150px;
+        }
+    
+        @media (min-width:768px) {
+            width: 768px;
+            padding: 14px 32px 0px;
+        }
+    
+        @media (min-width:1200px) {
+            width: 1200px;
+            padding: 45px 16px 0px;
+        }
+} 
+
+.hero-content__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero {
+    max-width: 247px;
+        @media (min-width:1200px) {
+        max-width: 367px;
+        }
+}
+
+.hero__title {
+    font-family: 'Seymour One';
+    font-size: 26px;
+    line-height: 1.27;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $color-text-main;
+    margin-bottom: 32px;
+        @media (min-width: 768px) {
+        margin-bottom: 24px;
+        }
+        @media (min-width: 1200px) {
+        font-size: 38px;
+        margin-bottom: 28px;
+        }
+}
+
+.hero__item {
+    display: inline-block;
+    &:not(:last-child) {
+        margin-right: 12px;
+        }
+}
+
+.hero__link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+    @extend %centered;
+    @extend %cursor;
+        @media (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.29;
+        }
+}
+
+.hero__link--btn {
+    color: $color-btn-text;
+    border: 2px solid $color-accent;
+    border-radius: 8px;
+    padding: 11px 26px;
+        &:hover {
+        border-color: $color-btn-hover;
+        }
+        @media (min-width: 1200px) {
+        color: $color-text-secondary;
+        border-radius: 10px;
+        padding: 12px 34px;
+        &:focus {
+        color: $color-text-main;
+        }
+        }
+}
+
+.hero__link--link {
+    text-decoration-line: underline;
+    color: $color-accent;
+        &:hover {
+        color: $color-btn-hover;
+        }
+        &:focus {
+        color: $color-text-main;
+        }        
+        @media (min-width: 1200px) {
+        padding: 12px 22px;
+        }
+}
+
+.hero-about {
+    @media (max-width:767px) {
+    display: none;
+    }
+}
+
+.hero-about__item {
+    text-align: right;
+        &:not(:last-child) {
+        margin-bottom: 20px;
+        }
+        @media (min-width: 1200px) {
+        &:not(:last-child) {
+        margin-bottom: 16px;
+        }
+        }
+}
+
+.hero-about__number {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 1.21;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $color-text-secondary;
+    margin-bottom: 4px;
+        @media (min-width: 1200px) {
+        font-size: 46px;
+        }
+}
+
+.hero-about__text {
+    font-size: 8px;
+    line-height: 1.25;
+    color: $color-text-main;
+        @media (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.21;
+        }
+}
+
+.hero-wrapper {
+    max-width: 139px;
+    margin-left: 215px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+        @media (max-width: 767px) {
+        display: none;
+        }
+        @media (min-width: 1200px) {
+        max-width: 200px;
+        margin-left: 257px;
+        margin-top: 111px;
+        padding-bottom: 103px;
+        }
+}
+
+.hero-wrapper__text {
+    font-size: 12px;
+    line-height: 1.4;    
+    color: $color-text-main;
+    margin-bottom: 12px;
+        @media (min-width: 1200px) {
+        font-size: 14px;
+        margin-bottom: 24px;        
+        }
+}
+
+.hero-wrapper__btn {
+    display: block;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    @extend %cursor;
+}
+
+.hero-wrapper__arrow {
+    fill: $color-text-main;
+}
+
+img {
+    display: block;
+}
+
+.hero__image--cone {
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+    z-index: 1;
+        @media (min-width:480px) {
+        right: 20px;
+        }
+        @media (min-width:768px) {
+        right: 92px;
+        }
+}
+
+.hero__image--dots {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.hero__image--plate {
+    position: absolute;
+    bottom: 12px;
+        @media (max-width:767px) {
+        display: none;
+        }
+        @media (min-width:1200px) {
+        bottom: 65px;
+        left: 16px;
+        }
+}
+
