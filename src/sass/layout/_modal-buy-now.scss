@@ -251,6 +251,8 @@
   z-index: 1;
 
   border: 2px solid #96af8c;
+
+
 }
 .products-check__label--yellow {
   padding-top: 95px;
@@ -267,15 +269,17 @@
 }
 
 .products-check__label--green:hover {
-  background-color: $color-bg-main;
+  // background-color: $color-bg-main;
   @extend %cursor;
 }
+
 .products-check__label--yellow:hover {
-  background-color: #efd478;
+  // background-color: #efd478;
   @extend %cursor;
 }
+
 .products-check__label--brown:hover {
-  background-color: #d6936d;
+  // background-color: #d6936d;
   @extend %cursor;
 }
 
