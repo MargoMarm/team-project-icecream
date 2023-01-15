@@ -246,7 +246,7 @@
   letter-spacing: 0.04em;
 }
 .products-check__label {
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -262,7 +262,6 @@
 
 .modal-buy-now__item--green:hover {
   background-color: $color-bg-main;
-  @extend %cursor;
 }
 .modal-buy-now__item--yellow:hover {
   background-color: #efd478;
