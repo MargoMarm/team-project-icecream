@@ -48,6 +48,8 @@
   width: 132px;
   height: 132px;
   position: absolute;
+  z-index: 2;
+
   top: -60px;
   left: 50%;
   transform: translateX(-50%);
@@ -107,17 +109,11 @@
   }
 }
 .modal-buy-now__item {
-  border-radius: 24px;
-  padding-top: 96px;
-
-  width: 132px;
-  height: 135px;
   position: relative;
-  z-index: 1;
-
-  border: 2px solid #96af8c;
-  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+  width: 132px;
+  height: 136px;
   border-radius: 15px;
+
   @media screen and (max-width: 767px) {
     margin-left: auto;
     margin-right: auto;
@@ -127,147 +123,159 @@
     @include tablet {
       margin-bottom: 0;
     }
+  }
+
+  .modal-buy-now__item:nth-child(2) {
+    & .modal-buy-now__circle {
+      background: linear-gradient(
+          0deg,
+          rgba(248, 210, 78, 0.7),
+          rgba(248, 210, 78, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+      &::before {
+        background-image: url(../images/products/card2-tablet-1x.png);
+
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: url(../images/products/card2-tablet-2x.png);
+        }
+        @media (min-device-pixel-ratio: 3),
+          (min-resolution: 288dpi),
+          (min-resolution: 3dppx) {
+          background-image: url(../images/products/card2-tablet-3x.png);
+        }
+        @include desktop {
+          background-image: url(../images/products/card2-desktop-1x.png);
+
+          @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/products/card2-desktop-2x.png);
+          }
+          @media (min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+            background-image: url(../images/products/card2-desktop-3x.png);
+          }
+        }
+      }
+    }
+  }
+  .modal-buy-now__item:nth-child(3) {
+    & .modal-buy-now__circle {
+      background: linear-gradient(
+          0deg,
+          rgba(213, 117, 63, 0.7),
+          rgba(213, 117, 63, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+      &::before {
+        background-image: url(../images/products/card3-tablet-1x.png);
+
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: url(../images/products/card3-tablet-2x.png);
+        }
+        @media (min-device-pixel-ratio: 3),
+          (min-resolution: 288dpi),
+          (min-resolution: 3dppx) {
+          background-image: url(../images/products/card3-tablet-3x.png);
+        }
+
+        @include desktop {
+          background-image: url(../images/products/card3-desktop-1x.png);
+
+          @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/products/card3-desktop-2x.png);
+          }
+          @media (min-device-pixel-ratio: 3),
+            (min-resolution: 288dpi),
+            (min-resolution: 3dppx) {
+            background-image: url(../images/products/card3-desktop-3x.png);
+          }
+        }
+      }
+    }
+  }
+  .products-check__label {
+    // position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+    border-radius: 15px;
+
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $color-text-secondary;
+    font-weight: 700;
+    font-size: 16px;
+
+    letter-spacing: 0.04em;
+    @include tel {
+      // width: 132px;
+      // height: 135px;
+    }
+
+    @include tablet {
+      // width: 132px;
+      // height: 135px;
+    }
 
     @include desktop {
-    }
-  }
-
-  @include tel {
-    width: 132px;
-    height: 135px;
-  }
-
-  @include tablet {
-    width: 132px;
-    height: 135px;
-  }
-
-  @include desktop {
-    width: 132px;
-    height: 135px;
-  }
-}
-.modal-buy-now__item:nth-child(2) {
-  border: 2px solid #efd478;
-  & .modal-buy-now__circle {
-    background: linear-gradient(
-        0deg,
-        rgba(248, 210, 78, 0.7),
-        rgba(248, 210, 78, 0.7)
-      ),
-      #d9d9d9;
-    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
-    &::before {
-      background-image: url(../images/products/card2-tablet-1x.png);
-
-      @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        background-image: url(../images/products/card2-tablet-2x.png);
-      }
-      @media (min-device-pixel-ratio: 3),
-        (min-resolution: 288dpi),
-        (min-resolution: 3dppx) {
-        background-image: url(../images/products/card2-tablet-3x.png);
-      }
-      @include desktop {
-        background-image: url(../images/products/card2-desktop-1x.png);
-
-        @media (min-device-pixel-ratio: 2),
-          (min-resolution: 192dpi),
-          (min-resolution: 2dppx) {
-          background-image: url(../images/products/card2-desktop-2x.png);
-        }
-        @media (min-device-pixel-ratio: 3),
-          (min-resolution: 288dpi),
-          (min-resolution: 3dppx) {
-          background-image: url(../images/products/card2-desktop-3x.png);
-        }
-      }
+      // width: 132px;
+      // height: 135px;
     }
   }
 }
-.modal-buy-now__item:nth-child(3) {
-  border: 2px solid #d6936d;
-
-  padding-top: 95px;
-  padding-bottom: 20px;
-  padding-left: 13px;
-  padding-right: 13px;
-  & .modal-buy-now__circle {
-    background: linear-gradient(
-        0deg,
-        rgba(213, 117, 63, 0.7),
-        rgba(213, 117, 63, 0.7)
-      ),
-      #d9d9d9;
-    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
-    &::before {
-      background-image: url(../images/products/card3-tablet-1x.png);
-
-      @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        background-image: url(../images/products/card3-tablet-2x.png);
-      }
-      @media (min-device-pixel-ratio: 3),
-        (min-resolution: 288dpi),
-        (min-resolution: 3dppx) {
-        background-image: url(../images/products/card3-tablet-3x.png);
-      }
-
-      @include desktop {
-        background-image: url(../images/products/card3-desktop-1x.png);
-
-        @media (min-device-pixel-ratio: 2),
-          (min-resolution: 192dpi),
-          (min-resolution: 2dppx) {
-          background-image: url(../images/products/card3-desktop-2x.png);
-        }
-        @media (min-device-pixel-ratio: 3),
-          (min-resolution: 288dpi),
-          (min-resolution: 3dppx) {
-          background-image: url(../images/products/card3-desktop-3x.png);
-        }
-      }
-    }
-  }
-}
-
-.modal-buy-now__title {
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $color-text-secondary;
-  font-weight: 700;
-  font-size: 16px;
-
-  letter-spacing: 0.04em;
-}
-.products-check__label {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  border-radius: 12px;
+.products-check__label--green {
+  border-radius: 24px;
+  padding-top: 96px;
 
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 1;
+
+  border: 2px solid #96af8c;
 }
+.products-check__label--yellow {
+  padding-top: 95px;
+
+  border: 2px solid #efd478;
+}
+.products-check__label--brown {
+  border: 2px solid #d6936d;
+  padding-top: 95px;
+}
+
+.modal-buy-now__title {
+}
+
 .products-check__input {
   display: none;
 }
 
-.modal-buy-now__item--green:hover {
+.products-check__label--green:hover {
   background-color: $color-bg-main;
+  @extend %cursor;
 }
-.modal-buy-now__item--yellow:hover {
+.products-check__label--yellow:hover {
   background-color: #efd478;
+  @extend %cursor;
 }
-.modal-buy-now__item--brown:hover {
+.products-check__label--brown:hover {
   background-color: #d6936d;
+  @extend %cursor;
 }
 
 #ice-cream:checked + .products-check__label--green {
