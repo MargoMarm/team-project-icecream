@@ -7,6 +7,7 @@
     padding-bottom: 60px;
   }
 }
+
 .about__main {
   text-align: center;
   margin-bottom: 54px;
@@ -21,6 +22,7 @@
     flex-direction: column;
     margin-bottom: 80px;
   }
+
   @media screen and (min-width: 1200px) {
     margin-bottom: 82px;
   }
@@ -83,30 +85,6 @@
     font-size: 30px;
   }
 }
-.cow{
-    display: flex;
-    border-radius: 50%;
-    background-color: $color-accent;
-    width: 279px;
-    height: 278px;
-    margin-left: auto;
-        margin-right: auto;
-    @media screen and (min-width: 768px) {
-            display: flex;
-                float: left;
-                margin-top: 18px;
-                width: 330px;
-                height: 330px;
-                margin-bottom: 60px;
-        }
-    
-        @media screen and (min-width: 1200px) {
-            width: 490px;
-                height: 490px;
-                margin-top: 39px;
-                margin-left: 0px;
-        }
-}
 
 .about__content {
   position: relative;
@@ -121,112 +99,101 @@
 }
 
 .about__cow {
-  width: 280px;
-  height: 300px;
-  background-color: rgba(248, 210, 78, 0.7);
-  border-radius: 50%;
-
-  @media screen and (min-width: 768px) {
-    width: 330px;
-    height: 356px;
+  display: flex;
+    border-radius: 50%;
+    background-color: $color-accent;
+    width: 279px;
+    height: 278px;
+  
+    @media screen and (min-width: 768px) {
+      display: flex;
+      float: left;
+      margin-top: 18px;
+      width: 330px;
+      height: 330px;
+      margin-bottom: 60px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      width: 490px;
+      height: 490px;
+      margin-top: 39px;
+      margin-left: 0px;
+    }
   }
 
-  @media screen and (min-width: 1200px) {
-    width: 491px;
-    height: 529px;
-  }
-
-  &::after {
+    .about__cow::before {
     content: '';
-    background-size: cover;
+
+  background-size: cover;
+  
     margin-top: 22px;
     display: flex;
     object-fit: cover;
-        width: 279px;
-        height: 278px;
-        margin-left: auto;
-        margin-right: auto;
-        
+    width: 279px;
+    height: 278px;
+    margin-left: auto;
+    margin-right: auto;
+  
     background-image: url(../images/how-its-made/cow-mobile-1x.png);
-    
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-            background-image: url(../images/how-its-made/cow-mobile-2x.png);
-        }
-    
-        @media (min-device-pixel-ratio: 3),
-        (min-resolution: 288dpi),
-        (min-resolution: 3dppx) {
-            background-image: url(../images/how-its-made/cow-mobile-3x.png);
-        }
- @include tablet {
-    display: flex;
-        float: left;
-        margin-top: 26px;
-        width: 330px;
-        height: 330px;
-        margin-bottom: 60px;
-        
-    background-image: url(../images/how-its-made/cow-tablet-1x.png);
-
+  
     @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
       background-image: url(../images/how-its-made/cow-mobile-2x.png);
     }
+  
     @media (min-device-pixel-ratio: 3),
-      (min-resolution: 288dpi),
-      (min-resolution: 3dppx) {
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
       background-image: url(../images/how-its-made/cow-mobile-3x.png);
     }
-
-    @include desktop {
+  
+    @include tablet {
+      display: flex;
+      float: left;
+      margin-top: 26px;
+      width: 330px;
+      height: 330px;
+      margin-bottom: 60px;
+  
+      background-image: url(../images/how-its-made/cow-tablet-1x.png);
+  
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(../images/how-its-made/cow-tablet-2x.png);
+      }
+  
+      @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+        background-image: url(../images/how-its-made/cow-tablet-3x.png);
+      }
+  
+      @include desktop {
         width: 490px;
         height: 490px;
         margin-top: 39px;
         margin-left: 0px;
-
-      width: 330px;
-      height: 356px;
-
-      background-image: url(../images/how-its-made/cow-tablet-1x.png);
-
-      @media (min-device-pixel-ratio: 2),
+  
+        background-image: url(../images/how-its-made/cow-desktop-1x.png);
+  
+        @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-        background-image: url(../images/how-its-made/cow-tablet-2x.png);
-      }
-
-      @media (min-device-pixel-ratio: 3),
+          background-image: url(../images/how-its-made/cow-desktop-2x.png);
+        }
+  
+        @media (min-device-pixel-ratio: 3),
         (min-resolution: 288dpi),
         (min-resolution: 3dppx) {
-        background-image: url(../images/how-its-made/cow-tablet-3x.png);
+          background-image: url(../images/how-its-made/cow-desktop-3x.png);
+        }
       }
     }
-
-    @media screen and (min-width: 1200px) {
-      top: 39px;
-
-      width: 491px;
-      height: 529px;
-      background-image: url(../images/how-its-made/cow-desktop-1x.png);
-
-      @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        background-image: url(../images/how-its-made/cow-desktop-1x.png);
-      }
-
-      @media (min-device-pixel-ratio: 3),
-        (min-resolution: 288dpi),
-        (min-resolution: 3dppx) {
-        background-image: url(../images/how-its-made/cow-desktop-1x.png);
-      }
-    }
+  
   }
-}
-
 .made__text {
   display: flex;
   flex-direction: column;
@@ -326,71 +293,47 @@
     width: 463px;
     font-size: 14px;
     line-height: 1.94;
-    letter-spacing: 0.04em;
-   
-
-    color: #FCFCFC;
-
-
-    @media screen and (min-width: 768px) {
-        display: inline-block;
-        text-align: left;
-       
-    }
-
-    @media screen and (min-width: 1200px) {
-        font-size: 14px;
-        line-height: 1.94;
-        
-    }
-        .made__button {
-            display: flex;
-    
-            font-family: 'Montserrat', 'sans-serif';
-    
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 1.28;
-            letter-spacing: 0.03em;
-            background-color: #F8D24E;
-            color: #000000;
-            width: 164px;
-            height: 42px;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            border-radius: 10px;
-            gap: 4px;
-            border: none;
-            margin: 0 auto;
-            cursor: pointer;
-    
-            &:hover {
-                background-color: #0A8817;
-            }
-    
-            &:focus {
-                color: #FCFCFC;
-                fill: currentColor;
-            }
-    
-            &:disabled {
-                color: #000000;
-                background-color: #ABABAB;
-            }
-    
-            @media screen and (min-width: 768px) {
-                display: inline-flex;
-                flex-direction: row;
-            }
-    
-            @media screen and (min-width: 1200px) {
-                flex-direction: row;
-                
-    
-            }
-        }
-      }
-    }
+  }
 }
 
+.made__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Montserrat', 'sans-serif';
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: 0.03em;
+
+  background-color: $color-accent;
+  color: $color-btn-text;
+  width: 164px;
+  height: 42px;
+
+  border-radius: 10px;
+  gap: 4px;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-btn-hover;
+  }
+
+  &:focus {
+    color: $color-text-main;
+    fill: currentColor;
+  }
+
+  &:disabled {
+    color: $color-btn-text;
+    background-color: $color-btn-disabled;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+  }
+}
