@@ -1,35 +1,29 @@
 .modal-map {
+  width: 280px;
 
-    width: 280px;
-    text-align: center;
-    
+  @include tablet {
+    width: 568px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
     @include tablet {
-            width: 568px;
-        }
-
-    &__title {
-        margin-bottom: 20px;
-
-        @include tablet {
-            margin-bottom: 32px;
-        }
+      margin-bottom: 32px;
     }
+  }
 
-    &__map {
-        width: 224px;
-        height: 199px;
-        margin-bottom: 20px;
+  &__map {
+    width: 224px;
+    height: 199px;
+    margin-bottom: 20px;
 
-        border-radius: 10px;
+    border-radius: 10px;
 
-        @include tablet {
-            margin-bottom: 32px;
-            width: 448px;
-            height: 260px;
-        }
+    @include tablet {
+      margin-bottom: 32px;
+      width: 448px;
+      height: 260px;
     }
-
-    &__submit-btn {
-        text-align: center;
-    }
+  }
 }
