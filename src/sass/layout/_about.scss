@@ -85,34 +85,76 @@
                     }
 }
 
-.cow {
+.cow::before {
+    content: '';
+    background-size: cover;
+   
+    position: absolute;
+    top: 11px;
     display: flex;
-    border-radius: 50%;
-    overflow: hidden;
-    object-fit: cover;
-    width: 279px;
-    height: 278px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0px -22px 0px 1px rgba(248, 210, 78, 0.7);
-
-    @media screen and (min-width: 768px) {
-        display: flex;
+       object-fit: cover;
+        width: 279px;
+        height: 278px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    background-image: url(../images/how-its-made/cow-mobile-1x.png);
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/how-its-made/cow-mobile-2x.png);
+        }
+    
+        @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: url(../images/how-its-made/cow-mobile-3x.png);
+        }
+ @include tablet {
+    display: flex;
         float: left;
         margin-top: 18px;
         width: 330px;
         height: 330px;
         margin-bottom: 60px;
-        box-shadow: 0px -26px 0px 1px rgba(248, 210, 78, 0.7);
+        
+    background-image: url(../images/how-its-made/cow-tablet-1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url(../images/how-its-made/cow-tablet-2x.png);
     }
 
-            @media screen and (min-width: 1200px) {
-                    width: 490px;
-                    height: 490px;
-                    margin-top: 39px;
-                    margin-left: 0px;
-                    box-shadow: 0px -39px 0px 1px rgba(248, 210, 78, 0.7);
-                }
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        background-image: url(../images/how-its-made/cow-tablet-3x.png);
+    }
+
+    @include desktop {
+        width: 490px;
+            height: 490px;
+            margin-top: 39px;
+            margin-left: 0px;
+
+        background-image: url(../images/how-its-made/cow-desktop-1x.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/how-its-made/cow-desktop-2x.png);
+        }
+
+        @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: url(../images/how-its-made/cow-desktop-3x.png);
+        }
+    }
+}
+
 
 }
 
