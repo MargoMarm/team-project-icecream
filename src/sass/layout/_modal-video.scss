@@ -1,0 +1,41 @@
+.modal-video {
+    width: 280px;
+
+    @include tablet {
+        width: 568px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        @include tablet {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__video {
+        width: 224px;
+        height: 199px;
+        margin-bottom: 20px;
+
+        border-radius: 10px;
+
+        @include tablet {
+            width: 448px;
+            height: 205px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__text {
+        text-align: start;
+
+        color: $color-text-secondary;
+        font-size: 14px;
+        line-height: 1.4;
+
+        @include tablet {
+            font-size: 16px;
+        }
+    }
+}

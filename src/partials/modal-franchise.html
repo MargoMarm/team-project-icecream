@@ -1,0 +1,57 @@
+<div class="modal-franchise modal" data-modal="modal-franchise">
+  <button class="modal__close-btn js-modal-close">
+    <svg class="modal__cross" width="20" height="20">
+      <use href="./images/sprite.svg#icon-icon-close-modal"></use>
+    </svg>
+  </button>
+
+  <p class="modal-franchise__title modal__title">
+    Thank you for your interest in owning an Ice Cream shop
+  </p>
+  <p class="modal-franchise__text">
+    Due to the overwhelming volume of franchise requests we are not accepting
+    new franchisee applications at this time. Once the application process
+    resumes, we will contact you for further information. Please fill out the
+    contact information below and we will reach out for additional information.
+    We appreciate your patience.
+  </p>
+
+  <form class="modal-products__form products-form form" name="products-form">
+    <input
+      type="text"
+      class="form__input"
+      placeholder="Name"
+      required
+      minlength="6"
+      pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+      title="Username must be two words separated by space."
+    />
+
+    <input
+      type="tel"
+      class="form__input"
+      placeholder="Phone"
+      required
+      pattern="380[0-9]{9}"
+      title="Phone number must be 12 symbols (380XXXXXXXXX)."
+    />
+
+    <input
+      type="email"
+      class="form__input"
+      placeholder="Email"
+      required
+      pattern="380[0-9]{9}"
+      title="Phone number must be 12 symbols (380XXXXXXXXX)."
+    />
+
+    <textarea
+      name="commentary"
+      rows="3"
+      class="form__input form__input-commentary"
+      placeholder="Comment"
+    ></textarea>
+
+    <button type="submit" class="modal__submit-btn">Submit</button>
+  </form>
+</div>
