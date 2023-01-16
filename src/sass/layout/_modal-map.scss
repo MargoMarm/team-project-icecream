@@ -28,6 +28,7 @@
   }
 
   &__link {
+    @extend %cursor;
     color: currentColor;
   }
 }
