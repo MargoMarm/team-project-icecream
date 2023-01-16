@@ -26,4 +26,9 @@
       height: 260px;
     }
   }
+
+  &__link {
+    @extend %cursor;
+    color: currentColor;
+  }
 }
