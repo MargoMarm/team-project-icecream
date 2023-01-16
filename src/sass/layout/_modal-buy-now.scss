@@ -1,12 +1,11 @@
 .modal-buy-now {
-  transform: translate(-50%, -50%);
   padding: 28px;
   width: 280px;
   background: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
   @include tablet {
-    padding: 54px 32px;
+    padding: 32px 54px;
     width: 568px;
   }
 }
@@ -96,7 +95,7 @@
 }
 .modal-buy-now__item {
   position: relative;
-  width: 132px;
+  width: 130px;
   height: 136px;
   border-radius: 15px;
 
