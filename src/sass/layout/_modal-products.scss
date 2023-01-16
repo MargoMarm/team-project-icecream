@@ -121,10 +121,8 @@
 
   &:hover {
     align-items: flex-start;
-    // padding-bottom: 0;
 
     & .pruducts-calories__quantity {
-      // bottom: -1px;
       transform: translateY(27px);
       @include desktop {
         transform: translateY(35px);
