@@ -20,8 +20,9 @@
 
 .gallery--container {
   margin: 0 auto;
+  height: 230px;
   img {
-    width: 90vw;
+    width: 87vw;
     height: auto;
     border-radius: 24px;
   }
@@ -30,13 +31,18 @@
       width: 100%;
       height: auto;
     }
-    max-width: 440px;
+    margin-left: -80px;
+    width: 440px;
+    height: 204px;
   }
   @include tablet {
-    max-width: 704px;
+    margin: 0 auto;
+    width: 704px;
+    height: 327px;
   }
   @include desktop {
-    max-width: 1030px;
+    width: 1013px;
+    height: 422px;
   }
   &:hover #slideset {
     animation-play-state: paused;
@@ -51,12 +57,15 @@
   position: relative;
   overflow: hidden;
   @include tel {
+    width: 440px;
     height: 204px;
   }
   @include tablet {
+    width: 704px;
     height: 327px;
   }
   @include desktop {
+    width: 1013px;
     height: 422px;
   }
 }
