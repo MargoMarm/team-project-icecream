@@ -20,7 +20,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 32px;
+    gap: calc((100% - 390px) / 2);
     margin-bottom: 40px;
   }
 }
@@ -238,4 +238,3 @@
 #milk-shake:checked + .products-check__label--brown {
   background-color: $color-third-card;
 }
-
