@@ -1,4 +1,4 @@
-.back-home-btn {
+.back-home {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -18,7 +18,11 @@
 
 
 }
-.back-home-btn__icon{
+.back-home__icon{
     transform: rotate(270deg);
     transform-origin: center;
+}
+
+.hidden {
+    display: none;
 }
