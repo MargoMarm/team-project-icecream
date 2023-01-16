@@ -129,6 +129,7 @@
   top: -108px;
   left: 50%;
   transform: translateX(-50%);
+
   @include tel {
     top: -105px;
   }
@@ -153,6 +154,8 @@
   top: -11px;
 
   background-image: url(../images/products/card1-tablet-1x.png);
+
+  transition: transform $cubic;
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -185,6 +188,13 @@
   }
 }
 
+.products-item:hover .products__circle::before {
+  transform: translateY(11px);
+  @include desktop {
+    transform: translateY(16px);
+  }
+}
+
 .products-item {
   border-radius: 24px;
   padding-top: 123px;
@@ -196,6 +206,8 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
+
+  transition: box-shadow $cubic;
 
   background-color: $color-first-card;
 
@@ -225,7 +237,6 @@
     margin-left: 0;
     padding-left: 26px;
     padding-right: 26px;
-    // margin-right: 0;
   }
 
   @include desktop {
@@ -234,6 +245,11 @@
     padding-top: 165px;
     padding-left: 64px;
     padding-right: 64px;
+  }
+
+  &:hover {
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
+      1px 4px 6px rgb(0 0 0 / 16%);
   }
 }
 
@@ -369,5 +385,12 @@
 
   @include desktop {
     bottom: 60px;
+  }
+
+  transition: scale $cubic;
+
+  &:hover,
+  &:focus {
+    scale: 1.3;
   }
 }
