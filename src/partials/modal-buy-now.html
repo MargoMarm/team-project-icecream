@@ -1,14 +1,10 @@
-<div
-  class="modal modal-buy-now"
-  data-modal="buy-now"
-  data-modal="buy-now-mobile"
->
+<div class="modal modal-buy-now" data-modal="buy-now">
   <button class="modal__close-btn js-modal-close">
     <svg class="modal__cross" width="20" height="20">
       <use href="./images/sprite.svg#icon-icon-close-modal"></use>
     </svg>
   </button>
-  <h2 class="modal-title modal__title">Buy now</h2>
+  <h2 class="modal__title modal__title--buynow">Buy now</h2>
   <ul class="modal-buy-now__list">
     <li class="modal-buy-now__item modal-buy-now__item--green">
       <div class="modal-buy-now__circle"></div>
@@ -62,7 +58,7 @@
     </li>
   </ul>
 
-  <form class="modal-products__form products-form" name="products-form">
+  <form class="form" name="products-form">
     <input
       type="text"
       class="form__input"
@@ -83,7 +79,7 @@
     <textarea
       name="commentary"
       rows="3"
-      class="products-form__input form__input-commentary"
+      class="form__input form__input-commentary"
       placeholder="Comment"
     ></textarea>
 
