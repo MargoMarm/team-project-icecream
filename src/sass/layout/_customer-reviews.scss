@@ -80,7 +80,7 @@
   @extend %visually-hidden;
 }
 .wrapper {
-    // position: relative;
+  // position: relative;
 
   display: flex;
   flex-direction: column;
@@ -100,7 +100,6 @@
   display: flex;
   align-items: center;
 
-  // min-height: 256px;
   padding: 35px 39px;
   margin-bottom: 32px;
 
@@ -110,10 +109,6 @@
 
   font-size: 12px;
   line-height: 2.55;
-
-  @include tel {
-    // max-width: 280px;
-  }
 
   @include tablet {
     max-width: 705px;
@@ -208,9 +203,6 @@
 }
 
 .wrapper__label {
-  // position: absolute;
-  // bottom: 0;
-  // display: block;
   width: 12px;
   height: 12px;
 
@@ -222,10 +214,7 @@
     margin-right: 18px;
   }
 }
-.wrapper__label:hover,
-#slide1:checked + .wrapper__label,
-#slide2:checked + .wrapper__label,
-#slide3:checked + .wrapper__label {
+.wrapper__label:hover {
   background-color: $color-bg-main;
   @extend %cursor;
 }
