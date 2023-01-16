@@ -42,6 +42,10 @@
   @include tablet {
     margin-bottom: 24px;
   }
+
+  &:hover::before {
+    transform: translateY(7px);
+  }
 }
 
 .modal-products__circle::before {
@@ -51,6 +55,8 @@
   height: 132px;
   position: absolute;
   top: -7px;
+
+  transition: transform $cubic;
 
   background-image: url(../images/modals/about-product-modal/photo1-desktop-1x.png);
 
@@ -95,9 +101,12 @@
   width: 53px;
   height: 72px;
   padding-bottom: 8px;
+  padding-top: 8px;
   border: 2px solid $color-modal-accent;
   border-radius: 40px;
   position: relative;
+
+  transition: align-items $cubic;
 
   @include tablet {
     font-size: 12px;
@@ -107,6 +116,18 @@
     height: 90px;
 
     padding-bottom: 12px;
+    padding-top: 12px;
+  }
+
+  &:hover {
+    align-items: flex-start;
+
+    & .pruducts-calories__quantity {
+      transform: translateY(27px);
+      @include desktop {
+        transform: translateY(35px);
+      }
+    }
   }
 }
 
@@ -126,6 +147,8 @@
   border: 2px solid $color-modal-accent;
   box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
   border-radius: 50%;
+
+  transition: transform $cubic;
 
   @include tablet {
     font-size: 12px;
