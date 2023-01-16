@@ -180,7 +180,7 @@
   line-height: 1.4;
   color: $color-text-secondary;
 
-  // transition: border-color $cubic;
+  transition: border-color $cubic;
 
   @include tablet {
     width: 368px;
