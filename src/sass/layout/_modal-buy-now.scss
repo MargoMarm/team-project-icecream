@@ -1,9 +1,7 @@
 .modal-buy-now {
   padding: 28px;
   width: 280px;
-  background: #fcfcfc;
-  border: 2px solid #f8d24e;
-  border-radius: 10px;
+  border: 2px solid $color-accent;
   @include tablet {
     padding: 32px 54px;
     width: 568px;
@@ -222,15 +220,15 @@
   position: relative;
   z-index: 1;
 
-  border: 2px solid #96af8c;
+  border: 2px solid $color-first-card;
 }
 .products-check__label--yellow {
   padding-top: 95px;
 
-  border: 2px solid #efd478;
+  border: 2px solid $color-second-card;
 }
 .products-check__label--brown {
-  border: 2px solid #d6936d;
+  border: 2px solid $color-third-card;
   padding-top: 95px;
 }
 
@@ -239,13 +237,13 @@
 }
 
 #ice-cream:checked + .products-check__label--green {
-  background-color: #96af8c;
+  background-color: $color-first-card;
 }
 #ice-coffee:checked + .products-check__label--yellow {
-  background-color: #efd478;
+  background-color: $color-second-card;
 }
 #milk-shake:checked + .products-check__label--brown {
-  background-color: #d6936d;
+  background-color: $color-third-card;
 }
 
 // ------------------inputs-------------------
