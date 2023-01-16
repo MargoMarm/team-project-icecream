@@ -386,4 +386,11 @@
   @include desktop {
     bottom: 60px;
   }
+
+  transition: scale $cubic;
+
+  &:hover,
+  &:focus {
+    scale: 1.3;
+  }
 }
