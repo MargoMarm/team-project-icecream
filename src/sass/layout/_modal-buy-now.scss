@@ -1,8 +1,4 @@
 .modal-buy-now {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
   transform: translate(-50%, -50%);
   padding: 28px;
   width: 280px;
@@ -12,7 +8,6 @@
   @include tablet {
     padding: 54px 32px;
     width: 568px;
-    height: auto;
   }
 }
 
@@ -29,15 +24,14 @@
 }
 
 .modal-buy-now__list {
+  margin-bottom: 32px;
+
   @include tablet {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
-  }
-  padding-bottom: 31px;
-  @include desktop {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
 .modal-buy-now__circle {
@@ -57,19 +51,6 @@
   top: -60px;
   left: 50%;
   transform: translateX(-50%);
-  @include tel {
-    top: -60px;
-  }
-
-  @include tablet {
-    top: -60px;
-  }
-
-  @include desktop {
-    width: 132px;
-    height: 132px;
-    top: -60px;
-  }
 }
 
 .modal-buy-now__circle::before {
@@ -259,7 +240,7 @@
 }
 
 #ice-cream:checked + .products-check__label--green {
-  background-color: $color-bg-main;
+  background-color: #96af8c;
 }
 #ice-coffee:checked + .products-check__label--yellow {
   background-color: #efd478;

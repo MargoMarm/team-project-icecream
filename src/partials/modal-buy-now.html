@@ -1,5 +1,14 @@
-<div class="modal-buy-now">
-  <h2 class="modal-title">Buy now</h2>
+<div
+  class="modal modal-buy-now"
+  data-modal="buy-now"
+  data-modal="buy-now-mobile"
+>
+  <button class="modal__close-btn js-modal-close">
+    <svg class="modal__cross" width="20" height="20">
+      <use href="./images/sprite.svg#icon-icon-close-modal"></use>
+    </svg>
+  </button>
+  <h2 class="modal-title modal__title">Buy now</h2>
   <ul class="modal-buy-now__list">
     <li class="modal-buy-now__item modal-buy-now__item--green">
       <div class="modal-buy-now__circle"></div>
@@ -8,7 +17,6 @@
         type="checkbox"
         name="point"
         id="ice-cream"
-        checked
       />
 
       <label
@@ -57,7 +65,7 @@
   <form class="modal-products__form products-form" name="products-form">
     <input
       type="text"
-      class="products-form__input"
+      class="form__input"
       placeholder="Name"
       required
       minlength="5"
@@ -65,16 +73,17 @@
 
     <input
       type="tel"
-      class="products-form__input"
+      class="form__input"
       placeholder="Phone"
       required
-      pattern="[0-9]{12}"
+      pattern="380[0-9]{9}"
+      title="Phone number must be 12 symbols (380XXXXXXXXX)."
     />
 
     <textarea
       name="commentary"
       rows="3"
-      class="products-form__input products-form__input-commentary"
+      class="products-form__input form__input-commentary"
       placeholder="Comment"
     ></textarea>
 
