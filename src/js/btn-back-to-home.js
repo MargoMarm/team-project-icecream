@@ -1,5 +1,5 @@
 const backHomeBtn = document.getElementById("back-home");
-const firstSection = document.getElementById("first-section");
+const firstSection = document.getElementById("hero");
 const firstSectionPosition = firstSection.offsetTop;
 
 window.addEventListener("scroll", () => {
