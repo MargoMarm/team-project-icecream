@@ -85,7 +85,7 @@
                     }
 }
 
-.buffalo {
+.cow {
     display: flex;
     border-radius: 50%;
     overflow: hidden;
@@ -123,6 +123,9 @@ width: 100%;
 margin-left: auto;
 margin-right: auto;
 margin-top: 40px;
+@media screen and (min-width: 480px) {
+    max-width: 220px;
+}
         @media screen and (min-width: 768px) {
             display: inline-block;
                align-content: flex-end;
