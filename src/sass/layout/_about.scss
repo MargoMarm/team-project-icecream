@@ -1,11 +1,13 @@
 .about {
-  padding-top: 61px;
+  padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: 480px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+ @include tablet{
+  padding-bottom: 86px;
+ }
+ @include desktop{
+  padding-bottom: 99px;
+ }
 }
 
 .about__main {
@@ -107,18 +109,16 @@
   
     @media screen and (min-width: 768px) {
       display: flex;
-      float: left;
-      margin-top: 18px;
+      
       width: 330px;
       height: 330px;
-      margin-bottom: 60px;
+     
     }
   
     @media screen and (min-width: 1200px) {
       width: 490px;
       height: 490px;
-      margin-top: 39px;
-      margin-left: 0px;
+      
     }
   }
 
@@ -226,7 +226,7 @@
 }
 
 .made__text-one {
-  width: 220px;
+  
   text-align: center;
   line-height: 1.76;
   letter-spacing: 0.04em;
@@ -247,7 +247,7 @@
 }
 
 .made__text-two {
-  width: 220px;
+ 
   line-height: 1.62;
   letter-spacing: 0.04em;
   text-align: center;
