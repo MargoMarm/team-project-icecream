@@ -28,6 +28,8 @@
   }
 
   &__link {
+	width: 145px;
+	height: 42px;
     @extend %cursor;
     color: currentColor;
   }

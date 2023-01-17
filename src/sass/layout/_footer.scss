@@ -8,6 +8,9 @@
         }
 }
 
+.footer-title {
+	@extend %visually-hidden;
+}
 .footer__wrap{
     @media (min-width: 768px) {
         display: flex;

@@ -10,6 +10,11 @@
     padding-bottom: 178px;
   }
 }
+
+.adventages__title {
+	@extend %visually-hidden;
+}
+
 .advantages__items {
   display: flex;
   flex-direction: column;
