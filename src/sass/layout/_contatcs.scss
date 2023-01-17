@@ -359,7 +359,7 @@
   align-items: center;
   border: 2px solid $color-accent;
   background-color: transparent;
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (min-width: 768px) {
     width: 100%;
   }
