@@ -64,6 +64,13 @@
   }
 }
 
+.contacts-list__item:hover,
+.contacts-list__item:focus {
+  transform: scale(98%);
+  box-shadow: 0 2px 2px rgb(0 0 0 / 24%), 0 8px 8px rgb(0 0 0 / 12%),
+    2px 8px 12px rgb(0 0 0 / 32%);
+}
+
 .contacts-list-item__box {
   width: 88px;
   height: 22px;
@@ -315,6 +322,7 @@
   margin-bottom: 16px;
   height: 42px;
   border: 0;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   @extend %centered;
   @media screen and (min-width: 768px) {
     width: 100%;
@@ -323,13 +331,11 @@
 }
 
 .contacts-button__btn-primary:hover {
-  background-color: $color-btn-hover;
   color: $color-btn-text-hover;
   @extend %cursor;
 }
 
 .contacts-button__btn-primary:focus {
-  background-color: $color-btn-hover;
   color: $color-btn-text-secondary;
   @extend %cursor;
 }
@@ -353,7 +359,7 @@
   align-items: center;
   border: 2px solid $color-accent;
   background-color: transparent;
-
+  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (min-width: 768px) {
     width: 100%;
   }
